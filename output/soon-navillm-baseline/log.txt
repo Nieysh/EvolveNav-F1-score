@@ -1,0 +1,589 @@
+2025-05-27 14:32:37,172   INFO  **********************Start logging**********************
+2025-05-27 14:32:37,172   INFO  CUDA_VISIBLE_DEVICES=4,5,6,7
+2025-05-27 14:32:37,172   INFO  all_cand_input   False
+2025-05-27 14:32:37,172   INFO  base_model       None
+2025-05-27 14:32:37,172   INFO  add_cand_landmark False
+2025-05-27 14:32:37,172   INFO  enable_navigation_cot True
+2025-05-27 14:32:37,172   INFO  self_improving_cot False
+2025-05-27 14:32:37,172   INFO  only_IL          False
+2025-05-27 14:32:37,172   INFO  cot_summarization True
+2025-05-27 14:32:37,172   INFO  cot_v4           True
+2025-05-27 14:32:37,172   INFO  enable_self_select False
+2025-05-27 14:32:37,172   INFO  cot_v4_only_direction False
+2025-05-27 14:32:37,172   INFO  cal_lmloss_prob  0.5
+2025-05-27 14:32:37,172   INFO  add_lmloss_with_prob True
+2025-05-27 14:32:37,172   INFO  remove_summarization True
+2025-05-27 14:32:37,172   INFO  cot_output_as_supervision False
+2025-05-27 14:32:37,172   INFO  replace_cot_gt_with_prob False
+2025-05-27 14:32:37,172   INFO  replace_cot_gt_prob 0.5
+2025-05-27 14:32:37,172   INFO  self_select_loss_weight 1.0
+2025-05-27 14:32:37,172   INFO  cot_v4_only_landmark False
+2025-05-27 14:32:37,172   INFO  alternate_post_training False
+2025-05-27 14:32:37,172   INFO  land_num         5
+2025-05-27 14:32:37,172   INFO  enable_lora      False
+2025-05-27 14:32:37,173   INFO  lora_r           None
+2025-05-27 14:32:37,173   INFO  lora_alpha       None
+2025-05-27 14:32:37,173   INFO  lora_dropout     None
+2025-05-27 14:32:37,173   INFO  lora_bias        None
+2025-05-27 14:32:37,173   INFO  lora_target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj
+2025-05-27 14:32:37,173   INFO  lora_weight_path None
+2025-05-27 14:32:37,173   INFO  data_dir         /mnt/data/nieyunshuang/NaviLLM/data
+2025-05-27 14:32:37,173   INFO  cfg_file         configs/soon.yaml
+2025-05-27 14:32:37,173   INFO  pretrained_model_name_or_path /mnt/data/nieyunshuang/NaviLLM/data/models/Vicuna-7B
+2025-05-27 14:32:37,173   INFO  off_batch_task   False
+2025-05-27 14:32:37,173   INFO  debug            False
+2025-05-27 14:32:37,173   INFO  seed             0
+2025-05-27 14:32:37,173   INFO  num_epochs       60
+2025-05-27 14:32:37,173   INFO  resume_from_checkpoint None
+2025-05-27 14:32:37,173   INFO  from_scratch     False
+2025-05-27 14:32:37,173   INFO  batch_size       1
+2025-05-27 14:32:37,173   INFO  val_batch_size   2
+2025-05-27 14:32:37,173   INFO  lr               3e-05
+2025-05-27 14:32:37,173   INFO  feat_dropout     0.4
+2025-05-27 14:32:37,173   INFO  num_warmup_steps 0
+2025-05-27 14:32:37,173   INFO  num_steps_per_epoch 2000
+2025-05-27 14:32:37,173   INFO  gradient_accumulation_step 16
+2025-05-27 14:32:37,173   INFO  precision        amp_bf16
+2025-05-27 14:32:37,173   INFO  workers          0
+2025-05-27 14:32:37,173   INFO  world_size       4
+2025-05-27 14:32:37,173   INFO  local_rank       0
+2025-05-27 14:32:37,173   INFO  dist_url         env://
+2025-05-27 14:32:37,173   INFO  dist_backend     nccl
+2025-05-27 14:32:37,173   INFO  horovod          False
+2025-05-27 14:32:37,173   INFO  no_set_device_rank False
+2025-05-27 14:32:37,173   INFO  output_dir       output/20250523/soon-once_forward_cot_navigation-cot_summarization-max5ldm-cotv4-addlmlosswithprob0.5
+2025-05-27 14:32:37,173   INFO  max_saved_checkpoints 1
+2025-05-27 14:32:37,173   INFO  save_ckpt_per_epochs 10
+2025-05-27 14:32:37,173   INFO  save_latest_states True
+2025-05-27 14:32:37,173   INFO  save_pred_results False
+2025-05-27 14:32:37,173   INFO  save_detail_results False
+2025-05-27 14:32:37,173   INFO  mode             train
+2025-05-27 14:32:37,174   INFO  stage            multi
+2025-05-27 14:32:37,174   INFO  ignoreid         -100
+2025-05-27 14:32:37,174   INFO  enable_og        True
+2025-05-27 14:32:37,174   INFO  enable_summarize True
+2025-05-27 14:32:37,174   INFO  enable_fgr2r     True
+2025-05-27 14:32:37,174   INFO  gen_loss_coef    1.0
+2025-05-27 14:32:37,174   INFO  obj_loss_coef    1.0
+2025-05-27 14:32:37,174   INFO  teacher_forcing_coef 1.0
+2025-05-27 14:32:37,174   INFO  fuse_obj         False
+2025-05-27 14:32:37,174   INFO  multi_endpoints  1
+2025-05-27 14:32:37,174   INFO  path_type        trusted_path
+2025-05-27 14:32:37,174   INFO  test_datasets    ['SOON']
+2025-05-27 14:32:37,174   INFO  validation_split val_unseen
+2025-05-27 14:32:37,174   INFO  do_sample        False
+2025-05-27 14:32:37,174   INFO  temperature      1.0
+2025-05-27 14:32:37,174   INFO  max_datapoints   None
+2025-05-27 14:32:37,174   INFO  rank             0
+2025-05-27 14:32:37,174   INFO  distributed      True
+2025-05-27 14:32:37,174   INFO  device           cuda:0
+2025-05-27 14:32:37,174   INFO  image_feat_size  1024
+2025-05-27 14:32:37,174   INFO  obj_feat_size    768
+2025-05-27 14:32:37,174   INFO  angle_feat_size  4
+2025-05-27 14:32:37,174   INFO  enc_full_graph   True
+2025-05-27 14:32:37,174   INFO  expert_policy    spl
+2025-05-27 14:32:37,174   INFO  num_pano_layers  2
+2025-05-27 14:32:37,174   INFO  ----------- Feature -----------
+2025-05-27 14:32:37,174   INFO  cfg.Feature.object_feature_type: 
+2025-05-27 14:32:37,174   INFO  cfg.Feature.angle_feat_size: 4
+2025-05-27 14:32:37,174   INFO  cfg.Feature.max_objects: 70
+2025-05-27 14:32:37,174   INFO  cfg.Feature.image_feat_size: 1024
+2025-05-27 14:32:37,174   INFO  ----------- feature_database -----------
+2025-05-27 14:32:37,174   INFO  cfg.Feature.feature_database.mp3d: eva_features/mp3d_EVA02-CLIP-L-14-336.hdf5
+2025-05-27 14:32:37,174   INFO  cfg.Feature.feature_database.scan_qa: eva_features/scanqa_EVA02-CLIP-L-14-336.hdf5
+2025-05-27 14:32:37,174   INFO  cfg.Feature.feature_database.coco: eva_features/coco_EVA02-CLIP-L-14-336.hdf5
+2025-05-27 14:32:37,174   INFO  cfg.Feature.obj_feat_size: 768
+2025-05-27 14:32:37,174   INFO  ----------- object_database -----------
+2025-05-27 14:32:37,174   INFO  cfg.Feature.object_database.reverie: obj_features/reverie_obj_feat
+2025-05-27 14:32:37,175   INFO  cfg.Feature.object_database.soon: obj_features/soon_obj_feat
+2025-05-27 14:32:37,175   INFO  ----------- Dataset -----------
+2025-05-27 14:32:37,175   INFO  ----------- R2R -----------
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.R2R.DIR: R2R
+2025-05-27 14:32:37,175   INFO  ----------- SPLIT -----------
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.R2R.SPLIT.train: FGR2R_train.json
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.R2R.SPLIT.val_seen: R2R_val_seen_enc.json
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.R2R.SPLIT.val_unseen: R2R_val_unseen_enc.json
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.R2R.SPLIT.test: R2R_test_enc.json
+2025-05-27 14:32:37,175   INFO  ----------- REVERIE -----------
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.REVERIE.DIR: REVERIE
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.REVERIE.bbox_file: BBoxes.json
+2025-05-27 14:32:37,175   INFO  ----------- SPLIT -----------
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.REVERIE.SPLIT.train: REVERIE_train_enc.json
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.REVERIE.SPLIT.val_seen: REVERIE_val_seen_enc.json
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.REVERIE.SPLIT.val_unseen: REVERIE_val_unseen_enc.json
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.REVERIE.SPLIT.test: REVERIE_test_enc.json
+2025-05-27 14:32:37,175   INFO  ----------- CVDN -----------
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.CVDN.DIR: CVDN
+2025-05-27 14:32:37,175   INFO  ----------- SPLIT -----------
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.CVDN.SPLIT.train: train.json
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.CVDN.SPLIT.val_seen: val_seen.json
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.CVDN.SPLIT.val_unseen: val_unseen.json
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.CVDN.SPLIT.test: test_cleaned.json
+2025-05-27 14:32:37,175   INFO  ----------- SOON -----------
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.SOON.DIR: SOON
+2025-05-27 14:32:37,175   INFO  ----------- SPLIT -----------
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.SOON.SPLIT.train: train_enc_pseudo_obj_ade30k_label.jsonl
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.SOON.SPLIT.val_seen: val_unseen_instrs_enc_pseudo_obj_ade30k_label.jsonl
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.SOON.SPLIT.val_unseen: val_unseen_house_enc_pseudo_obj_ade30k_label.jsonl
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.SOON.SPLIT.test: test_v2_enc.jsonl
+2025-05-27 14:32:37,175   INFO  ----------- ScanQA -----------
+2025-05-27 14:32:37,175   INFO  cfg.Dataset.ScanQA.DIR: ScanQA
+2025-05-27 14:32:37,175   INFO  ----------- SPLIT -----------
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.ScanQA.SPLIT.train: ScanQA_v1.0_train_reformat.json
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.ScanQA.SPLIT.val_unseen: ScanQA_v1.0_val_reformat.json
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.ScanQA.SPLIT.test_wo_obj: ScanQA_v1.0_test_wo_obj_reformat.json
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.ScanQA.SPLIT.test_w_obj: ScanQA_v1.0_test_w_obj_reformat.json
+2025-05-27 14:32:37,176   INFO  ----------- EQA -----------
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.EQA.DIR: EQA_MP3D
+2025-05-27 14:32:37,176   INFO  ----------- SPLIT -----------
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.EQA.SPLIT.val_unseen: eqa_val_enc.json
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.EQA.ANSWER_VOCAB: eqa_answer_vocab.json
+2025-05-27 14:32:37,176   INFO  ----------- R2R_AUG -----------
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.R2R_AUG.DIR: R2R
+2025-05-27 14:32:37,176   INFO  ----------- SPLIT -----------
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.R2R_AUG.SPLIT.train: R2R_prevalent_aug_train_enc.jsonl
+2025-05-27 14:32:37,176   INFO  ----------- REVERIE_AUG -----------
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.REVERIE_AUG.DIR: REVERIE
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.REVERIE_AUG.bbox_file: BBoxes.json
+2025-05-27 14:32:37,176   INFO  ----------- SPLIT -----------
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.REVERIE_AUG.SPLIT.train: REVERIE_speaker_aug_enc.jsonl
+2025-05-27 14:32:37,176   INFO  ----------- LLaVA -----------
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.LLaVA.DIR: LLaVA
+2025-05-27 14:32:37,176   INFO  ----------- SPLIT -----------
+2025-05-27 14:32:37,176   INFO  cfg.Dataset.LLaVA.SPLIT.train: detail_23k.json
+2025-05-27 14:32:37,176   INFO  ----------- Pretrain -----------
+2025-05-27 14:32:37,176   INFO  cfg.Pretrain.SOURCE: ['R2R']
+2025-05-27 14:32:37,176   INFO  cfg.Pretrain.Ratio: [1]
+2025-05-27 14:32:37,176   INFO  ----------- LOSS_COEF -----------
+2025-05-27 14:32:37,176   INFO  cfg.Pretrain.LOSS_COEF.R2R_AUG: 1
+2025-05-27 14:32:37,176   INFO  cfg.Pretrain.LOSS_COEF.REVERIE_AUG: 1
+2025-05-27 14:32:37,176   INFO  ----------- Multi -----------
+2025-05-27 14:32:37,176   INFO  cfg.Multi.SOURCE: ['SOON']
+2025-05-27 14:32:37,176   INFO  cfg.Multi.Ratio: [1]
+2025-05-27 14:32:37,176   INFO  ----------- LOSS_COEF -----------
+2025-05-27 14:32:37,176   INFO  ----------- Model -----------
+2025-05-27 14:32:37,176   INFO  cfg.Model.num_l_layers: 9
+2025-05-27 14:32:37,176   INFO  cfg.Model.num_pano_layers: 2
+2025-05-27 14:32:37,176   INFO  cfg.Model.num_x_layers: 4
+2025-05-27 14:32:37,176   INFO  cfg.Model.graph_sprels: True
+2025-05-27 14:32:37,176   INFO  cfg.Model.fusion: dynamic
+2025-05-27 14:32:37,177   INFO  cfg.Model.enc_full_graph: True
+2025-05-27 14:32:37,177   INFO  cfg.Model.expert_policy: spl
+2025-05-27 14:32:37,177   INFO  ----------- Optim -----------
+2025-05-27 14:32:37,177   INFO  ----------- val_max_action_len -----------
+2025-05-27 14:32:37,177   INFO  cfg.Optim.val_max_action_len.R2R: 15
+2025-05-27 14:32:37,177   INFO  cfg.Optim.val_max_action_len.REVERIE: 15
+2025-05-27 14:32:37,177   INFO  cfg.Optim.val_max_action_len.CVDN: 30
+2025-05-27 14:32:37,177   INFO  cfg.Optim.val_max_action_len.SOON: 20
+2025-05-27 14:32:37,177   INFO  cfg.Optim.val_max_action_len.EQA: 15
+2025-05-27 14:32:37,177   INFO  ----------- train_max_action_len -----------
+2025-05-27 14:32:37,177   INFO  cfg.Optim.train_max_action_len.R2R: 15
+2025-05-27 14:32:37,177   INFO  cfg.Optim.train_max_action_len.REVERIE: 15
+2025-05-27 14:32:37,177   INFO  cfg.Optim.train_max_action_len.CVDN: 15
+2025-05-27 14:32:37,177   INFO  cfg.Optim.train_max_action_len.SOON: 15
+2025-05-27 14:32:37,177   INFO  cfg.Optim.train_max_action_len.EQA: 15
+2025-05-27 14:32:37,177   INFO  cfg.Optim.train_max_action_len.R2R_AUG: 15
+2025-05-27 14:32:37,177   INFO  cfg.Optim.train_max_action_len.REVERIE_AUG: 15
+2025-05-27 14:32:52,187   INFO  [INFO] SOONDataset loaded with 27800 instructions, using splits: train
+2025-05-27 14:32:52,187   INFO  
+- Dataset: load 27800 SOON samples
+- Dataset: load train split: 27800 samples in total
+- Dataset: load train split: 34 scans in total
+2025-05-27 14:32:52,187   INFO  SOON: 27800 samples loaded
+2025-05-27 14:33:06,132   INFO  [INFO] SOONDataset loaded with 3390 instructions, using splits: val_unseen
+2025-05-27 14:33:06,132   INFO  
+- Dataset: load 3390 SOON samples
+- Dataset: load val_unseen split: 3390 samples in total
+- Dataset: load val_unseen split: 5 scans in total
+2025-05-27 14:33:06,132   INFO  SOON: 3390 samples loaded
+2025-05-27 14:34:24,470   INFO  model type: torch.bfloat16
+2025-05-27 14:34:24,470   INFO  *************** init model *************** 
+2025-05-27 14:34:31,937   INFO  model initialized with 6773.48 M trainable parameters
+2025-05-27 14:34:33,228   INFO  Training in distributed mode : total_batch_size: 4
+2025-05-27 14:34:33,228   INFO  **************************** Train ****************************
+2025-05-27 16:08:18,978   INFO  ***** train [0] epoch *****
+2025-05-27 16:08:18,978   INFO  Loss: 29.85
+Instr_pred: 2.04
+SOON: 29.85
+
+2025-05-27 16:08:18,980   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 16:19:41,544   INFO  eval 3392 predictions
+2025-05-27 16:19:41,625   INFO  
+[Eval] val_unseen epoch 0
+
+ [Eval] dataset=[SOON] 
+, action_steps: 14.59, steps: 20.24, lengths: 41.31, nav_error: 13.35, oracle_error: 7.68
+[Eval] ||| sr: 9.79, oracle_sr: 22.20, spl: 6.20, det_sr: 0.27, det_spl: 0.19
+2025-05-27 16:19:41,630   INFO  Current Score: 6.196399840608722
+2025-05-27 16:19:41,630   INFO  Best Score: 6.196399840608722
+2025-05-27 17:55:07,080   INFO  ***** train [1] epoch *****
+2025-05-27 17:55:07,080   INFO  Loss: 24.61
+Instr_pred: 1.46
+SOON: 24.61
+
+2025-05-27 17:55:07,082   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 18:04:31,800   INFO  eval 3392 predictions
+2025-05-27 18:04:31,881   INFO  
+[Eval] val_unseen epoch 1
+
+ [Eval] dataset=[SOON] 
+, action_steps: 11.10, steps: 13.48, lengths: 24.75, nav_error: 12.92, oracle_error: 7.56
+[Eval] ||| sr: 10.29, oracle_sr: 21.34, spl: 8.73, det_sr: 0.21, det_spl: 0.18
+2025-05-27 18:04:31,884   INFO  Current Score: 8.726475989423482
+2025-05-27 18:04:31,885   INFO  Best Score: 8.726475989423482
+2025-05-27 18:04:33,784   INFO  Remove Checkpoint at Epoch 0...
+2025-05-27 19:42:31,196   INFO  ***** train [2] epoch *****
+2025-05-27 19:42:31,196   INFO  Loss: 22.58
+Instr_pred: 1.18
+SOON: 22.58
+
+2025-05-27 19:42:31,198   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 19:52:14,256   INFO  eval 3392 predictions
+2025-05-27 19:52:14,328   INFO  
+[Eval] val_unseen epoch 2
+
+ [Eval] dataset=[SOON] 
+, action_steps: 11.59, steps: 14.58, lengths: 25.60, nav_error: 12.62, oracle_error: 7.11
+[Eval] ||| sr: 11.67, oracle_sr: 22.76, spl: 10.13, det_sr: 0.59, det_spl: 0.54
+2025-05-27 19:52:14,332   INFO  Current Score: 10.128559208123562
+2025-05-27 19:52:14,332   INFO  Best Score: 10.128559208123562
+2025-05-27 19:52:16,413   INFO  Remove Checkpoint at Epoch 1...
+2025-05-27 21:29:43,422   INFO  ***** train [3] epoch *****
+2025-05-27 21:29:43,422   INFO  Loss: 20.89
+Instr_pred: 1.02
+SOON: 20.89
+
+2025-05-27 21:29:43,424   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 21:40:06,209   INFO  eval 3392 predictions
+2025-05-27 21:40:06,292   INFO  
+[Eval] val_unseen epoch 3
+
+ [Eval] dataset=[SOON] 
+, action_steps: 12.36, steps: 15.58, lengths: 27.30, nav_error: 12.80, oracle_error: 6.79
+[Eval] ||| sr: 12.29, oracle_sr: 24.71, spl: 10.47, det_sr: 0.56, det_spl: 0.47
+2025-05-27 21:40:06,296   INFO  Current Score: 10.468263672592705
+2025-05-27 21:40:06,296   INFO  Best Score: 10.468263672592705
+2025-05-27 21:40:08,379   INFO  Remove Checkpoint at Epoch 2...
+2025-05-27 23:17:19,350   INFO  ***** train [4] epoch *****
+2025-05-27 23:17:19,350   INFO  Loss: 20.41
+Instr_pred: 0.82
+SOON: 20.41
+
+2025-05-27 23:17:19,352   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 23:28:39,763   INFO  eval 3392 predictions
+2025-05-27 23:28:39,851   INFO  
+[Eval] val_unseen epoch 4
+
+ [Eval] dataset=[SOON] 
+, action_steps: 13.86, steps: 16.60, lengths: 31.60, nav_error: 13.10, oracle_error: 6.34
+[Eval] ||| sr: 12.50, oracle_sr: 32.22, spl: 10.06, det_sr: 0.65, det_spl: 0.54
+2025-05-27 23:28:39,855   INFO  Current Score: 10.059792896620415
+2025-05-27 23:28:39,855   INFO  Best Score: 10.468263672592705
+2025-05-28 01:03:21,934   INFO  ***** train [5] epoch *****
+2025-05-28 01:03:21,934   INFO  Loss: 19.08
+Instr_pred: 0.64
+SOON: 19.08
+
+2025-05-28 01:03:21,936   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 01:15:02,063   INFO  eval 3392 predictions
+2025-05-28 01:15:02,139   INFO  
+[Eval] val_unseen epoch 5
+
+ [Eval] dataset=[SOON] 
+, action_steps: 14.78, steps: 19.38, lengths: 38.77, nav_error: 11.67, oracle_error: 5.56
+[Eval] ||| sr: 13.24, oracle_sr: 40.27, spl: 9.30, det_sr: 0.44, det_spl: 0.27
+2025-05-28 01:15:02,143   INFO  Current Score: 9.297844019926526
+2025-05-28 01:15:02,143   INFO  Best Score: 10.468263672592705
+2025-05-28 02:48:20,662   INFO  ***** train [6] epoch *****
+2025-05-28 02:48:20,662   INFO  Loss: 17.08
+Instr_pred: 0.52
+SOON: 17.08
+
+2025-05-28 02:48:20,663   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 02:59:12,812   INFO  eval 3392 predictions
+2025-05-28 02:59:12,890   INFO  
+[Eval] val_unseen epoch 6
+
+ [Eval] dataset=[SOON] 
+, action_steps: 13.65, steps: 18.21, lengths: 36.08, nav_error: 10.74, oracle_error: 5.73
+[Eval] ||| sr: 15.24, oracle_sr: 37.53, spl: 10.75, det_sr: 0.65, det_spl: 0.47
+2025-05-28 02:59:12,895   INFO  Current Score: 10.745944338062014
+2025-05-28 02:59:12,895   INFO  Best Score: 10.745944338062014
+2025-05-28 02:59:14,912   INFO  Remove Checkpoint at Epoch 3...
+2025-05-28 04:32:49,690   INFO  ***** train [7] epoch *****
+2025-05-28 04:32:49,690   INFO  Loss: 15.64
+Instr_pred: 0.38
+SOON: 15.64
+
+2025-05-28 04:32:49,692   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 04:43:55,757   INFO  eval 3392 predictions
+2025-05-28 04:43:55,837   INFO  
+[Eval] val_unseen epoch 7
+
+ [Eval] dataset=[SOON] 
+, action_steps: 13.78, steps: 17.19, lengths: 34.35, nav_error: 9.82, oracle_error: 5.18
+[Eval] ||| sr: 21.14, oracle_sr: 44.63, spl: 15.95, det_sr: 1.36, det_spl: 1.10
+2025-05-28 04:43:55,841   INFO  Current Score: 15.949329863323184
+2025-05-28 04:43:55,841   INFO  Best Score: 15.949329863323184
+2025-05-28 04:43:57,940   INFO  Remove Checkpoint at Epoch 6...
+2025-05-28 06:16:58,683   INFO  ***** train [8] epoch *****
+2025-05-28 06:16:58,683   INFO  Loss: 14.05
+Instr_pred: 0.33
+SOON: 14.05
+
+2025-05-28 06:16:58,685   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 06:28:13,934   INFO  eval 3392 predictions
+2025-05-28 06:28:14,018   INFO  
+[Eval] val_unseen epoch 8
+
+ [Eval] dataset=[SOON] 
+, action_steps: 14.18, steps: 18.56, lengths: 35.74, nav_error: 9.66, oracle_error: 4.84
+[Eval] ||| sr: 21.52, oracle_sr: 49.38, spl: 16.08, det_sr: 1.00, det_spl: 0.85
+2025-05-28 06:28:14,023   INFO  Current Score: 16.07682610893739
+2025-05-28 06:28:14,023   INFO  Best Score: 16.07682610893739
+2025-05-28 06:28:16,079   INFO  Remove Checkpoint at Epoch 7...
+2025-05-28 08:01:07,669   INFO  ***** train [9] epoch *****
+2025-05-28 08:01:07,669   INFO  Loss: 12.40
+Instr_pred: 0.27
+SOON: 12.40
+
+2025-05-28 08:01:07,670   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 08:10:54,803   INFO  eval 3392 predictions
+2025-05-28 08:10:54,888   INFO  
+[Eval] val_unseen epoch 9
+
+ [Eval] dataset=[SOON] 
+, action_steps: 11.86, steps: 15.23, lengths: 29.79, nav_error: 9.23, oracle_error: 5.71
+[Eval] ||| sr: 26.15, oracle_sr: 39.59, spl: 20.56, det_sr: 1.53, det_spl: 1.30
+2025-05-28 08:10:54,892   INFO  Current Score: 20.561261183007595
+2025-05-28 08:10:54,892   INFO  Best Score: 20.561261183007595
+2025-05-28 08:10:56,927   INFO  Remove Checkpoint at Epoch 8...
+2025-05-28 09:43:20,758   INFO  ***** train [10] epoch *****
+2025-05-28 09:43:20,758   INFO  Loss: 10.58
+Instr_pred: 0.20
+SOON: 10.58
+
+2025-05-28 09:43:20,760   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 09:54:08,457   INFO  eval 3392 predictions
+2025-05-28 09:54:08,548   INFO  
+[Eval] val_unseen epoch 10
+
+ [Eval] dataset=[SOON] 
+, action_steps: 13.43, steps: 16.20, lengths: 31.81, nav_error: 8.75, oracle_error: 4.62
+[Eval] ||| sr: 28.63, oracle_sr: 50.97, spl: 22.31, det_sr: 1.92, det_spl: 1.57
+2025-05-28 09:54:08,553   INFO  Current Score: 22.312303499556844
+2025-05-28 09:54:08,553   INFO  Best Score: 22.312303499556844
+2025-05-28 09:54:10,657   INFO  Remove Checkpoint at Epoch 9...
+2025-05-28 11:26:34,429   INFO  ***** train [11] epoch *****
+2025-05-28 11:26:34,429   INFO  Loss: 9.64
+Instr_pred: 0.17
+SOON: 9.64
+
+2025-05-28 11:26:34,430   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 11:37:26,900   INFO  eval 3392 predictions
+2025-05-28 11:37:26,993   INFO  
+[Eval] val_unseen epoch 11
+
+ [Eval] dataset=[SOON] 
+, action_steps: 13.37, steps: 17.85, lengths: 35.08, nav_error: 8.64, oracle_error: 4.65
+[Eval] ||| sr: 28.15, oracle_sr: 49.91, spl: 20.14, det_sr: 1.56, det_spl: 1.11
+2025-05-28 11:37:26,998   INFO  Current Score: 20.142543524032096
+2025-05-28 11:37:26,998   INFO  Best Score: 22.312303499556844
+2025-05-28 13:09:07,581   INFO  ***** train [12] epoch *****
+2025-05-28 13:09:07,581   INFO  Loss: 9.14
+Instr_pred: 0.15
+SOON: 9.14
+
+2025-05-28 13:09:07,583   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 13:19:46,500   INFO  eval 3392 predictions
+2025-05-28 13:19:46,590   INFO  
+[Eval] val_unseen epoch 12
+
+ [Eval] dataset=[SOON] 
+, action_steps: 13.31, steps: 16.91, lengths: 32.83, nav_error: 9.28, oracle_error: 4.99
+[Eval] ||| sr: 26.68, oracle_sr: 46.76, spl: 19.51, det_sr: 1.39, det_spl: 1.10
+2025-05-28 13:19:46,594   INFO  Current Score: 19.50553879338262
+2025-05-28 13:19:46,594   INFO  Best Score: 22.312303499556844
+2025-05-28 14:51:25,571   INFO  ***** train [13] epoch *****
+2025-05-28 14:51:25,571   INFO  Loss: 7.96
+Instr_pred: 0.13
+SOON: 7.96
+
+2025-05-28 14:51:25,573   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 15:02:11,066   INFO  eval 3392 predictions
+2025-05-28 15:02:11,258   INFO  
+[Eval] val_unseen epoch 13
+
+ [Eval] dataset=[SOON] 
+, action_steps: 12.87, steps: 16.39, lengths: 31.65, nav_error: 9.15, oracle_error: 5.00
+[Eval] ||| sr: 28.57, oracle_sr: 46.70, spl: 21.01, det_sr: 1.80, det_spl: 1.29
+2025-05-28 15:02:11,267   INFO  Current Score: 21.010793890295172
+2025-05-28 15:02:11,268   INFO  Best Score: 22.312303499556844
+2025-05-28 16:33:48,929   INFO  ***** train [14] epoch *****
+2025-05-28 16:33:48,929   INFO  Loss: 7.18
+Instr_pred: 0.12
+SOON: 7.18
+
+2025-05-28 16:33:48,931   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 16:44:06,961   INFO  eval 3392 predictions
+2025-05-28 16:44:07,057   INFO  
+[Eval] val_unseen epoch 14
+
+ [Eval] dataset=[SOON] 
+, action_steps: 12.57, steps: 15.72, lengths: 31.25, nav_error: 8.78, oracle_error: 4.97
+[Eval] ||| sr: 30.19, oracle_sr: 46.49, spl: 22.81, det_sr: 2.09, det_spl: 1.61
+2025-05-28 16:44:07,061   INFO  Current Score: 22.81024290324542
+2025-05-28 16:44:07,061   INFO  Best Score: 22.81024290324542
+2025-05-28 16:44:09,157   INFO  Remove Checkpoint at Epoch 10...
+2025-05-28 18:15:02,378   INFO  ***** train [15] epoch *****
+2025-05-28 18:15:02,379   INFO  Loss: 6.85
+Instr_pred: 0.11
+SOON: 6.85
+
+2025-05-28 18:15:02,380   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 18:25:48,162   INFO  eval 3392 predictions
+2025-05-28 18:25:48,260   INFO  
+[Eval] val_unseen epoch 15
+
+ [Eval] dataset=[SOON] 
+, action_steps: 13.46, steps: 17.70, lengths: 35.42, nav_error: 8.57, oracle_error: 4.30
+[Eval] ||| sr: 30.48, oracle_sr: 53.51, spl: 22.28, det_sr: 1.44, det_spl: 1.05
+2025-05-28 18:25:48,264   INFO  Current Score: 22.280902848750642
+2025-05-28 18:25:48,264   INFO  Best Score: 22.81024290324542
+2025-05-28 19:56:13,151   INFO  ***** train [16] epoch *****
+2025-05-28 19:56:13,151   INFO  Loss: 5.94
+Instr_pred: 0.10
+SOON: 5.94
+
+2025-05-28 19:56:13,153   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 20:06:03,700   INFO  eval 3392 predictions
+2025-05-28 20:06:03,799   INFO  
+[Eval] val_unseen epoch 16
+
+ [Eval] dataset=[SOON] 
+, action_steps: 12.12, steps: 15.70, lengths: 30.36, nav_error: 8.59, oracle_error: 5.06
+[Eval] ||| sr: 32.10, oracle_sr: 47.29, spl: 23.73, det_sr: 2.27, det_spl: 1.72
+2025-05-28 20:06:03,802   INFO  Current Score: 23.727899656378867
+2025-05-28 20:06:03,802   INFO  Best Score: 23.727899656378867
+2025-05-28 20:06:05,901   INFO  Remove Checkpoint at Epoch 14...
+2025-05-28 21:36:16,262   INFO  ***** train [17] epoch *****
+2025-05-28 21:36:16,262   INFO  Loss: 5.85
+Instr_pred: 0.10
+SOON: 5.85
+
+2025-05-28 21:36:16,263   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 21:46:35,238   INFO  eval 3392 predictions
+2025-05-28 21:46:35,332   INFO  
+[Eval] val_unseen epoch 17
+
+ [Eval] dataset=[SOON] 
+, action_steps: 12.55, steps: 15.73, lengths: 30.59, nav_error: 8.89, oracle_error: 5.02
+[Eval] ||| sr: 30.40, oracle_sr: 46.02, spl: 22.92, det_sr: 1.68, det_spl: 1.31
+2025-05-28 21:46:35,336   INFO  Current Score: 22.91839796370893
+2025-05-28 21:46:35,336   INFO  Best Score: 23.727899656378867
+2025-05-28 23:16:39,526   INFO  ***** train [18] epoch *****
+2025-05-28 23:16:39,526   INFO  Loss: 5.43
+Instr_pred: 0.10
+SOON: 5.43
+
+2025-05-28 23:16:39,527   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-28 23:26:17,872   INFO  eval 3392 predictions
+2025-05-28 23:26:17,967   INFO  
+[Eval] val_unseen epoch 18
+
+ [Eval] dataset=[SOON] 
+, action_steps: 11.81, steps: 14.45, lengths: 28.54, nav_error: 8.48, oracle_error: 5.04
+[Eval] ||| sr: 32.22, oracle_sr: 46.20, spl: 25.24, det_sr: 2.18, det_spl: 1.77
+2025-05-28 23:26:17,971   INFO  Current Score: 25.24171764596955
+2025-05-28 23:26:17,971   INFO  Best Score: 25.24171764596955
+2025-05-28 23:26:20,054   INFO  Remove Checkpoint at Epoch 16...
+2025-05-29 00:56:06,190   INFO  ***** train [19] epoch *****
+2025-05-29 00:56:06,190   INFO  Loss: 4.92
+Instr_pred: 0.09
+SOON: 4.92
+
+2025-05-29 00:56:06,191   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-29 01:06:14,781   INFO  eval 3392 predictions
+2025-05-29 01:06:14,872   INFO  
+[Eval] val_unseen epoch 19
+
+ [Eval] dataset=[SOON] 
+, action_steps: 12.30, steps: 15.94, lengths: 31.77, nav_error: 8.68, oracle_error: 5.18
+[Eval] ||| sr: 29.72, oracle_sr: 44.87, spl: 22.00, det_sr: 2.51, det_spl: 1.97
+2025-05-29 01:06:14,875   INFO  Current Score: 21.999149517624698
+2025-05-29 01:06:14,875   INFO  Best Score: 25.24171764596955
+2025-05-29 02:35:48,337   INFO  ***** train [20] epoch *****
+2025-05-29 02:35:48,338   INFO  Loss: 4.97
+Instr_pred: 0.09
+SOON: 4.97
+
+2025-05-29 02:35:48,339   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-29 02:45:52,347   INFO  eval 3392 predictions
+2025-05-29 02:45:52,444   INFO  
+[Eval] val_unseen epoch 20
+
+ [Eval] dataset=[SOON] 
+, action_steps: 12.40, steps: 15.64, lengths: 30.75, nav_error: 8.59, oracle_error: 4.90
+[Eval] ||| sr: 31.07, oracle_sr: 47.76, spl: 23.32, det_sr: 2.39, det_spl: 1.82
+2025-05-29 02:45:52,449   INFO  Current Score: 23.32003787291094
+2025-05-29 02:45:52,449   INFO  Best Score: 25.24171764596955
+2025-05-29 04:15:07,137   INFO  ***** train [21] epoch *****
+2025-05-29 04:15:07,137   INFO  Loss: 4.43
+Instr_pred: 0.08
+SOON: 4.43
+
+2025-05-29 04:15:07,139   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-29 04:24:22,808   INFO  eval 3392 predictions
+2025-05-29 04:24:22,902   INFO  
+[Eval] val_unseen epoch 21
+
+ [Eval] dataset=[SOON] 
+, action_steps: 11.08, steps: 13.85, lengths: 27.05, nav_error: 8.55, oracle_error: 5.46
+[Eval] ||| sr: 31.57, oracle_sr: 41.95, spl: 24.33, det_sr: 2.36, det_spl: 1.87
+2025-05-29 04:24:22,905   INFO  Current Score: 24.33086974923109
+2025-05-29 04:24:22,905   INFO  Best Score: 25.24171764596955
+2025-05-29 05:53:35,973   INFO  ***** train [22] epoch *****
+2025-05-29 05:53:35,973   INFO  Loss: 4.19
+Instr_pred: 0.08
+SOON: 4.19
+
+2025-05-29 05:53:35,975   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-29 06:03:43,620   INFO  eval 3392 predictions
+2025-05-29 06:03:43,714   INFO  
+[Eval] val_unseen epoch 22
+
+ [Eval] dataset=[SOON] 
+, action_steps: 12.15, steps: 14.66, lengths: 28.97, nav_error: 9.00, oracle_error: 5.25
+[Eval] ||| sr: 28.63, oracle_sr: 44.16, spl: 21.61, det_sr: 2.30, det_spl: 1.76
+2025-05-29 06:03:43,717   INFO  Current Score: 21.61090470521039
+2025-05-29 06:03:43,717   INFO  Best Score: 25.24171764596955
+2025-05-29 07:32:19,109   INFO  ***** train [23] epoch *****
+2025-05-29 07:32:19,109   INFO  Loss: 4.15
+Instr_pred: 0.08
+SOON: 4.15
+
+2025-05-29 07:32:19,111   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-29 07:42:16,035   INFO  eval 3392 predictions
+2025-05-29 07:42:16,133   INFO  
+[Eval] val_unseen epoch 23
+
+ [Eval] dataset=[SOON] 
+, action_steps: 12.14, steps: 15.69, lengths: 31.14, nav_error: 8.71, oracle_error: 5.11
+[Eval] ||| sr: 32.19, oracle_sr: 45.55, spl: 23.01, det_sr: 2.39, det_spl: 1.76
+2025-05-29 07:42:16,137   INFO  Current Score: 23.00969932996014
+2025-05-29 07:42:16,137   INFO  Best Score: 25.24171764596955
+2025-05-29 09:10:41,802   INFO  ***** train [24] epoch *****
+2025-05-29 09:10:41,802   INFO  Loss: 3.91
+Instr_pred: 0.08
+SOON: 3.91
+
+2025-05-29 09:10:41,804   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-29 09:20:51,737   INFO  eval 3392 predictions
+2025-05-29 09:20:51,836   INFO  
+[Eval] val_unseen epoch 24
+
+ [Eval] dataset=[SOON] 
+, action_steps: 12.35, steps: 15.83, lengths: 31.51, nav_error: 8.45, oracle_error: 4.82
+[Eval] ||| sr: 32.40, oracle_sr: 47.76, spl: 24.68, det_sr: 2.45, det_spl: 1.95
+2025-05-29 09:20:51,840   INFO  Current Score: 24.682848267528147
+2025-05-29 09:20:51,840   INFO  Best Score: 25.24171764596955

@@ -1,0 +1,16 @@
+{
+  "dataset": "R2R",
+  "split": "val_unseen",
+  "epoch": 0,
+  "metrics": {
+    "action_steps": 5.5440613026819925,
+    "steps": 6.12473392933163,
+    "lengths": 11.835987924976507,
+    "nav_error": 3.189326029204685,
+    "oracle_error": 1.9361966738647807,
+    "sr": 70.88122605363985,
+    "oracle_sr": 78.41634738186463,
+    "spl": 63.45901675691488
+  },
+  "num_predictions": 2349
+}

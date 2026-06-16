@@ -1,0 +1,605 @@
+2025-05-27 14:50:38,880   INFO  **********************Start logging**********************
+2025-05-27 14:50:38,880   INFO  CUDA_VISIBLE_DEVICES=1,5,6,7
+2025-05-27 14:50:38,880   INFO  all_cand_input   False
+2025-05-27 14:50:38,880   INFO  base_model       None
+2025-05-27 14:50:38,880   INFO  add_cand_landmark False
+2025-05-27 14:50:38,880   INFO  enable_navigation_cot True
+2025-05-27 14:50:38,880   INFO  self_improving_cot False
+2025-05-27 14:50:38,880   INFO  only_IL          False
+2025-05-27 14:50:38,880   INFO  cot_summarization True
+2025-05-27 14:50:38,880   INFO  cot_v4           True
+2025-05-27 14:50:38,880   INFO  enable_self_select False
+2025-05-27 14:50:38,880   INFO  cot_v4_only_direction False
+2025-05-27 14:50:38,880   INFO  cal_lmloss_prob  0.5
+2025-05-27 14:50:38,880   INFO  add_lmloss_with_prob True
+2025-05-27 14:50:38,880   INFO  remove_summarization True
+2025-05-27 14:50:38,880   INFO  cot_output_as_supervision False
+2025-05-27 14:50:38,880   INFO  replace_cot_gt_with_prob False
+2025-05-27 14:50:38,880   INFO  replace_cot_gt_prob 0.5
+2025-05-27 14:50:38,880   INFO  self_select_loss_weight 1.0
+2025-05-27 14:50:38,880   INFO  cot_v4_only_landmark False
+2025-05-27 14:50:38,880   INFO  alternate_post_training False
+2025-05-27 14:50:38,880   INFO  land_num         5
+2025-05-27 14:50:38,880   INFO  enable_lora      False
+2025-05-27 14:50:38,880   INFO  lora_r           None
+2025-05-27 14:50:38,880   INFO  lora_alpha       None
+2025-05-27 14:50:38,880   INFO  lora_dropout     None
+2025-05-27 14:50:38,880   INFO  lora_bias        None
+2025-05-27 14:50:38,880   INFO  lora_target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj
+2025-05-27 14:50:38,881   INFO  lora_weight_path None
+2025-05-27 14:50:38,881   INFO  data_dir         /mnt/data/nieyunshuang/NaviLLM/data
+2025-05-27 14:50:38,881   INFO  cfg_file         configs/reverie.yaml
+2025-05-27 14:50:38,881   INFO  pretrained_model_name_or_path /mnt/data/nieyunshuang/NaviLLM/data/models/Vicuna-7B
+2025-05-27 14:50:38,881   INFO  off_batch_task   False
+2025-05-27 14:50:38,881   INFO  debug            False
+2025-05-27 14:50:38,881   INFO  seed             0
+2025-05-27 14:50:38,881   INFO  num_epochs       60
+2025-05-27 14:50:38,881   INFO  resume_from_checkpoint None
+2025-05-27 14:50:38,881   INFO  from_scratch     False
+2025-05-27 14:50:38,881   INFO  batch_size       1
+2025-05-27 14:50:38,881   INFO  val_batch_size   2
+2025-05-27 14:50:38,881   INFO  lr               3e-05
+2025-05-27 14:50:38,881   INFO  feat_dropout     0.4
+2025-05-27 14:50:38,881   INFO  num_warmup_steps 0
+2025-05-27 14:50:38,881   INFO  num_steps_per_epoch 2000
+2025-05-27 14:50:38,881   INFO  gradient_accumulation_step 16
+2025-05-27 14:50:38,881   INFO  precision        amp_bf16
+2025-05-27 14:50:38,881   INFO  workers          0
+2025-05-27 14:50:38,881   INFO  world_size       4
+2025-05-27 14:50:38,881   INFO  local_rank       0
+2025-05-27 14:50:38,881   INFO  dist_url         env://
+2025-05-27 14:50:38,881   INFO  dist_backend     nccl
+2025-05-27 14:50:38,881   INFO  horovod          False
+2025-05-27 14:50:38,881   INFO  no_set_device_rank False
+2025-05-27 14:50:38,881   INFO  output_dir       output/20250523/reverie-once_forward_cot_navigation-cot_summarization-max5ldm-cotv4-addlmlosswithprob0.5
+2025-05-27 14:50:38,881   INFO  max_saved_checkpoints 1
+2025-05-27 14:50:38,881   INFO  save_ckpt_per_epochs 10
+2025-05-27 14:50:38,881   INFO  save_latest_states True
+2025-05-27 14:50:38,881   INFO  save_pred_results False
+2025-05-27 14:50:38,881   INFO  save_detail_results False
+2025-05-27 14:50:38,881   INFO  mode             train
+2025-05-27 14:50:38,881   INFO  stage            multi
+2025-05-27 14:50:38,881   INFO  ignoreid         -100
+2025-05-27 14:50:38,881   INFO  enable_og        True
+2025-05-27 14:50:38,881   INFO  enable_summarize True
+2025-05-27 14:50:38,882   INFO  enable_fgr2r     True
+2025-05-27 14:50:38,882   INFO  gen_loss_coef    1.0
+2025-05-27 14:50:38,882   INFO  obj_loss_coef    1.0
+2025-05-27 14:50:38,882   INFO  teacher_forcing_coef 1.0
+2025-05-27 14:50:38,882   INFO  fuse_obj         False
+2025-05-27 14:50:38,882   INFO  multi_endpoints  1
+2025-05-27 14:50:38,882   INFO  path_type        trusted_path
+2025-05-27 14:50:38,882   INFO  test_datasets    ['REVERIE']
+2025-05-27 14:50:38,882   INFO  validation_split val_unseen
+2025-05-27 14:50:38,882   INFO  do_sample        False
+2025-05-27 14:50:38,882   INFO  temperature      1.0
+2025-05-27 14:50:38,882   INFO  max_datapoints   None
+2025-05-27 14:50:38,882   INFO  rank             0
+2025-05-27 14:50:38,882   INFO  distributed      True
+2025-05-27 14:50:38,882   INFO  device           cuda:0
+2025-05-27 14:50:38,882   INFO  image_feat_size  1024
+2025-05-27 14:50:38,882   INFO  obj_feat_size    768
+2025-05-27 14:50:38,882   INFO  angle_feat_size  4
+2025-05-27 14:50:38,882   INFO  enc_full_graph   True
+2025-05-27 14:50:38,882   INFO  expert_policy    spl
+2025-05-27 14:50:38,882   INFO  num_pano_layers  2
+2025-05-27 14:50:38,882   INFO  ----------- Feature -----------
+2025-05-27 14:50:38,882   INFO  cfg.Feature.object_feature_type: 
+2025-05-27 14:50:38,882   INFO  cfg.Feature.angle_feat_size: 4
+2025-05-27 14:50:38,882   INFO  cfg.Feature.max_objects: 70
+2025-05-27 14:50:38,882   INFO  cfg.Feature.image_feat_size: 1024
+2025-05-27 14:50:38,882   INFO  ----------- feature_database -----------
+2025-05-27 14:50:38,882   INFO  cfg.Feature.feature_database.mp3d: eva_features/mp3d_EVA02-CLIP-L-14-336.hdf5
+2025-05-27 14:50:38,882   INFO  cfg.Feature.feature_database.scan_qa: eva_features/scanqa_EVA02-CLIP-L-14-336.hdf5
+2025-05-27 14:50:38,882   INFO  cfg.Feature.feature_database.coco: eva_features/coco_EVA02-CLIP-L-14-336.hdf5
+2025-05-27 14:50:38,882   INFO  cfg.Feature.obj_feat_size: 768
+2025-05-27 14:50:38,882   INFO  ----------- object_database -----------
+2025-05-27 14:50:38,882   INFO  cfg.Feature.object_database.reverie: obj_features/reverie_obj_feat
+2025-05-27 14:50:38,882   INFO  cfg.Feature.object_database.soon: obj_features/soon_obj_feat
+2025-05-27 14:50:38,882   INFO  ----------- Dataset -----------
+2025-05-27 14:50:38,883   INFO  ----------- R2R -----------
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.R2R.DIR: R2R
+2025-05-27 14:50:38,883   INFO  ----------- SPLIT -----------
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.R2R.SPLIT.train: FGR2R_train.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.R2R.SPLIT.val_seen: R2R_val_seen_enc.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.R2R.SPLIT.val_unseen: R2R_val_unseen_enc.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.R2R.SPLIT.test: R2R_test_enc.json
+2025-05-27 14:50:38,883   INFO  ----------- REVERIE -----------
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.REVERIE.DIR: REVERIE
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.REVERIE.bbox_file: BBoxes.json
+2025-05-27 14:50:38,883   INFO  ----------- SPLIT -----------
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.REVERIE.SPLIT.train: REVERIE_train_enc.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.REVERIE.SPLIT.val_seen: REVERIE_val_seen_enc.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.REVERIE.SPLIT.val_unseen: REVERIE_val_unseen_enc.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.REVERIE.SPLIT.test: REVERIE_test_enc.json
+2025-05-27 14:50:38,883   INFO  ----------- CVDN -----------
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.CVDN.DIR: CVDN
+2025-05-27 14:50:38,883   INFO  ----------- SPLIT -----------
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.CVDN.SPLIT.train: train.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.CVDN.SPLIT.val_seen: val_seen.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.CVDN.SPLIT.val_unseen: val_unseen.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.CVDN.SPLIT.test: test_cleaned.json
+2025-05-27 14:50:38,883   INFO  ----------- SOON -----------
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.SOON.DIR: SOON
+2025-05-27 14:50:38,883   INFO  ----------- SPLIT -----------
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.SOON.SPLIT.train: train_enc_pseudo_obj_ade30k_label.jsonl
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.SOON.SPLIT.val_seen: val_unseen_instrs_enc_pseudo_obj_ade30k_label.jsonl
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.SOON.SPLIT.val_unseen: val_unseen_house_enc_pseudo_obj_ade30k_label.jsonl
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.SOON.SPLIT.test: test_v2_enc.jsonl
+2025-05-27 14:50:38,883   INFO  ----------- ScanQA -----------
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.ScanQA.DIR: ScanQA
+2025-05-27 14:50:38,883   INFO  ----------- SPLIT -----------
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.ScanQA.SPLIT.train: ScanQA_v1.0_train_reformat.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.ScanQA.SPLIT.val_unseen: ScanQA_v1.0_val_reformat.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.ScanQA.SPLIT.test_wo_obj: ScanQA_v1.0_test_wo_obj_reformat.json
+2025-05-27 14:50:38,883   INFO  cfg.Dataset.ScanQA.SPLIT.test_w_obj: ScanQA_v1.0_test_w_obj_reformat.json
+2025-05-27 14:50:38,884   INFO  ----------- EQA -----------
+2025-05-27 14:50:38,884   INFO  cfg.Dataset.EQA.DIR: EQA_MP3D
+2025-05-27 14:50:38,884   INFO  ----------- SPLIT -----------
+2025-05-27 14:50:38,884   INFO  cfg.Dataset.EQA.SPLIT.val_unseen: eqa_val_enc.json
+2025-05-27 14:50:38,884   INFO  cfg.Dataset.EQA.ANSWER_VOCAB: eqa_answer_vocab.json
+2025-05-27 14:50:38,884   INFO  ----------- R2R_AUG -----------
+2025-05-27 14:50:38,884   INFO  cfg.Dataset.R2R_AUG.DIR: R2R
+2025-05-27 14:50:38,884   INFO  ----------- SPLIT -----------
+2025-05-27 14:50:38,884   INFO  cfg.Dataset.R2R_AUG.SPLIT.train: R2R_prevalent_aug_train_enc.jsonl
+2025-05-27 14:50:38,884   INFO  ----------- REVERIE_AUG -----------
+2025-05-27 14:50:38,884   INFO  cfg.Dataset.REVERIE_AUG.DIR: REVERIE
+2025-05-27 14:50:38,884   INFO  cfg.Dataset.REVERIE_AUG.bbox_file: BBoxes.json
+2025-05-27 14:50:38,884   INFO  ----------- SPLIT -----------
+2025-05-27 14:50:38,884   INFO  cfg.Dataset.REVERIE_AUG.SPLIT.train: REVERIE_speaker_aug_enc.jsonl
+2025-05-27 14:50:38,884   INFO  ----------- LLaVA -----------
+2025-05-27 14:50:38,884   INFO  cfg.Dataset.LLaVA.DIR: LLaVA
+2025-05-27 14:50:38,884   INFO  ----------- SPLIT -----------
+2025-05-27 14:50:38,884   INFO  cfg.Dataset.LLaVA.SPLIT.train: detail_23k.json
+2025-05-27 14:50:38,884   INFO  ----------- Pretrain -----------
+2025-05-27 14:50:38,884   INFO  cfg.Pretrain.SOURCE: ['R2R']
+2025-05-27 14:50:38,884   INFO  cfg.Pretrain.Ratio: [1]
+2025-05-27 14:50:38,884   INFO  ----------- LOSS_COEF -----------
+2025-05-27 14:50:38,884   INFO  cfg.Pretrain.LOSS_COEF.R2R_AUG: 1
+2025-05-27 14:50:38,884   INFO  cfg.Pretrain.LOSS_COEF.REVERIE_AUG: 1
+2025-05-27 14:50:38,884   INFO  ----------- Multi -----------
+2025-05-27 14:50:38,884   INFO  cfg.Multi.SOURCE: ['REVERIE']
+2025-05-27 14:50:38,884   INFO  cfg.Multi.Ratio: [1]
+2025-05-27 14:50:38,884   INFO  ----------- LOSS_COEF -----------
+2025-05-27 14:50:38,884   INFO  ----------- Model -----------
+2025-05-27 14:50:38,884   INFO  cfg.Model.num_l_layers: 9
+2025-05-27 14:50:38,884   INFO  cfg.Model.num_pano_layers: 2
+2025-05-27 14:50:38,884   INFO  cfg.Model.num_x_layers: 4
+2025-05-27 14:50:38,884   INFO  cfg.Model.graph_sprels: True
+2025-05-27 14:50:38,884   INFO  cfg.Model.fusion: dynamic
+2025-05-27 14:50:38,884   INFO  cfg.Model.enc_full_graph: True
+2025-05-27 14:50:38,884   INFO  cfg.Model.expert_policy: spl
+2025-05-27 14:50:38,885   INFO  ----------- Optim -----------
+2025-05-27 14:50:38,885   INFO  ----------- val_max_action_len -----------
+2025-05-27 14:50:38,885   INFO  cfg.Optim.val_max_action_len.R2R: 15
+2025-05-27 14:50:38,885   INFO  cfg.Optim.val_max_action_len.REVERIE: 15
+2025-05-27 14:50:38,885   INFO  cfg.Optim.val_max_action_len.CVDN: 30
+2025-05-27 14:50:38,885   INFO  cfg.Optim.val_max_action_len.SOON: 20
+2025-05-27 14:50:38,885   INFO  cfg.Optim.val_max_action_len.EQA: 15
+2025-05-27 14:50:38,885   INFO  ----------- train_max_action_len -----------
+2025-05-27 14:50:38,885   INFO  cfg.Optim.train_max_action_len.R2R: 15
+2025-05-27 14:50:38,885   INFO  cfg.Optim.train_max_action_len.REVERIE: 15
+2025-05-27 14:50:38,885   INFO  cfg.Optim.train_max_action_len.CVDN: 15
+2025-05-27 14:50:38,885   INFO  cfg.Optim.train_max_action_len.SOON: 15
+2025-05-27 14:50:38,885   INFO  cfg.Optim.train_max_action_len.EQA: 15
+2025-05-27 14:50:38,885   INFO  cfg.Optim.train_max_action_len.R2R_AUG: 15
+2025-05-27 14:50:38,885   INFO  cfg.Optim.train_max_action_len.REVERIE_AUG: 15
+2025-05-27 14:50:47,554   INFO  [INFO] REVERIEDataset loaded with 10466 instructions, using splits: train
+2025-05-27 14:50:47,555   INFO  
+- Dataset: load 10466 REVERIE samples
+- Dataset: load train split: 10466 samples in total
+- Dataset: load train split: 60 scans in total
+2025-05-27 14:50:47,555   INFO  REVERIE: 10466 samples loaded
+2025-05-27 14:50:53,421   INFO  [INFO] REVERIEDataset loaded with 3521 instructions, using splits: val_unseen
+2025-05-27 14:50:53,422   INFO  
+- Dataset: load 3521 REVERIE samples
+- Dataset: load val_unseen split: 3521 samples in total
+- Dataset: load val_unseen split: 10 scans in total
+2025-05-27 14:50:53,422   INFO  REVERIE: 3521 samples loaded
+2025-05-27 14:52:12,926   INFO  model type: torch.bfloat16
+2025-05-27 14:52:12,926   INFO  *************** init model *************** 
+2025-05-27 14:52:15,341   INFO  model initialized with 6773.48 M trainable parameters
+2025-05-27 14:52:16,128   INFO  Training in distributed mode : total_batch_size: 4
+2025-05-27 14:52:16,128   INFO  **************************** Train ****************************
+2025-05-27 16:16:13,840   INFO  ***** train [0] epoch *****
+2025-05-27 16:16:13,840   INFO  Loss: 23.61
+Instr_pred: 2.04
+REVERIE: 23.61
+
+2025-05-27 16:16:13,842   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-27 16:22:44,432   INFO  eval 3524 predictions
+2025-05-27 16:22:44,527   INFO  
+[Eval] val_unseen epoch 0
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 6.92, steps: 9.91, lengths: 20.25, nav_error: 10.28, oracle_error: 5.60
+[Eval] ||| sr: 5.31, oracle_sr: 14.59, spl: 3.86, rgs: 0.91, rgspl: 0.63
+2025-05-27 16:22:44,532   INFO  Current Score: 3.85777326034649
+2025-05-27 16:22:44,532   INFO  Best Score: 3.85777326034649
+2025-05-27 17:51:11,626   INFO  ***** train [1] epoch *****
+2025-05-27 17:51:11,626   INFO  Loss: 21.01
+Instr_pred: 1.66
+REVERIE: 21.01
+
+2025-05-27 17:51:11,628   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-27 17:56:45,128   INFO  eval 3524 predictions
+2025-05-27 17:56:45,214   INFO  
+[Eval] val_unseen epoch 1
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 6.42, steps: 7.00, lengths: 13.99, nav_error: 10.81, oracle_error: 5.48
+[Eval] ||| sr: 6.73, oracle_sr: 16.29, spl: 5.15, rgs: 1.45, rgspl: 1.12
+2025-05-27 17:56:45,217   INFO  Current Score: 5.149085100649052
+2025-05-27 17:56:45,217   INFO  Best Score: 5.149085100649052
+2025-05-27 17:56:47,156   INFO  Remove Checkpoint at Epoch 0...
+2025-05-27 19:23:17,567   INFO  ***** train [2] epoch *****
+2025-05-27 19:23:17,568   INFO  Loss: 19.74
+Instr_pred: 1.57
+REVERIE: 19.74
+
+2025-05-27 19:23:17,570   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-27 19:29:00,387   INFO  eval 3524 predictions
+2025-05-27 19:29:00,472   INFO  
+[Eval] val_unseen epoch 2
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 6.51, steps: 7.53, lengths: 14.70, nav_error: 11.11, oracle_error: 5.55
+[Eval] ||| sr: 7.60, oracle_sr: 14.87, spl: 6.23, rgs: 1.42, rgspl: 1.16
+2025-05-27 19:29:00,476   INFO  Current Score: 6.230512474357341
+2025-05-27 19:29:00,476   INFO  Best Score: 6.230512474357341
+2025-05-27 19:29:01,106   INFO  Remove Checkpoint at Epoch 1...
+2025-05-27 20:55:39,882   INFO  ***** train [3] epoch *****
+2025-05-27 20:55:39,882   INFO  Loss: 18.01
+Instr_pred: 1.48
+REVERIE: 18.01
+
+2025-05-27 20:55:39,885   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-27 21:01:45,334   INFO  eval 3524 predictions
+2025-05-27 21:01:45,431   INFO  
+[Eval] val_unseen epoch 3
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.02, steps: 8.02, lengths: 15.84, nav_error: 9.74, oracle_error: 4.58
+[Eval] ||| sr: 10.90, oracle_sr: 22.19, spl: 8.96, rgs: 1.67, rgspl: 1.35
+2025-05-27 21:01:45,434   INFO  Current Score: 8.958732767404145
+2025-05-27 21:01:45,434   INFO  Best Score: 8.958732767404145
+2025-05-27 21:01:46,130   INFO  Remove Checkpoint at Epoch 2...
+2025-05-27 22:30:52,560   INFO  ***** train [4] epoch *****
+2025-05-27 22:30:52,707   INFO  Loss: 16.72
+Instr_pred: 1.42
+REVERIE: 16.72
+
+2025-05-27 22:30:52,710   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-27 22:37:14,845   INFO  eval 3524 predictions
+2025-05-27 22:37:14,936   INFO  
+[Eval] val_unseen epoch 4
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 6.70, steps: 7.87, lengths: 15.47, nav_error: 9.21, oracle_error: 4.62
+[Eval] ||| sr: 16.32, oracle_sr: 25.17, spl: 13.34, rgs: 2.75, rgspl: 2.28
+2025-05-27 22:37:14,940   INFO  Current Score: 13.336514497484275
+2025-05-27 22:37:14,940   INFO  Best Score: 13.336514497484275
+2025-05-27 22:37:15,817   INFO  Remove Checkpoint at Epoch 3...
+2025-05-28 00:03:26,907   INFO  ***** train [5] epoch *****
+2025-05-28 00:03:26,909   INFO  Loss: 15.18
+Instr_pred: 1.37
+REVERIE: 15.18
+
+2025-05-28 00:03:26,911   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 00:10:08,803   INFO  eval 3524 predictions
+2025-05-28 00:10:08,892   INFO  
+[Eval] val_unseen epoch 5
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.74, steps: 10.23, lengths: 20.30, nav_error: 8.56, oracle_error: 4.22
+[Eval] ||| sr: 16.63, oracle_sr: 26.53, spl: 13.17, rgs: 3.09, rgspl: 2.51
+2025-05-28 00:10:08,896   INFO  Current Score: 13.173215858409456
+2025-05-28 00:10:08,896   INFO  Best Score: 13.336514497484275
+2025-05-28 01:37:23,357   INFO  ***** train [6] epoch *****
+2025-05-28 01:37:23,358   INFO  Loss: 13.22
+Instr_pred: 1.30
+REVERIE: 13.22
+
+2025-05-28 01:37:23,360   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 01:44:29,122   INFO  eval 3524 predictions
+2025-05-28 01:44:29,215   INFO  
+[Eval] val_unseen epoch 6
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.73, steps: 9.52, lengths: 18.70, nav_error: 8.58, oracle_error: 4.01
+[Eval] ||| sr: 22.33, oracle_sr: 35.07, spl: 18.48, rgs: 4.37, rgspl: 3.57
+2025-05-28 01:44:29,220   INFO  Current Score: 18.477842580307282
+2025-05-28 01:44:29,220   INFO  Best Score: 18.477842580307282
+2025-05-28 01:44:29,444   INFO  Remove Checkpoint at Epoch 4...
+2025-05-28 03:08:24,272   INFO  ***** train [7] epoch *****
+2025-05-28 03:08:24,273   INFO  Loss: 11.88
+Instr_pred: 1.28
+REVERIE: 11.88
+
+2025-05-28 03:08:24,275   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 03:14:48,046   INFO  eval 3524 predictions
+2025-05-28 03:14:48,133   INFO  
+[Eval] val_unseen epoch 7
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.28, steps: 8.97, lengths: 17.98, nav_error: 7.85, oracle_error: 3.93
+[Eval] ||| sr: 21.99, oracle_sr: 33.09, spl: 18.62, rgs: 4.65, rgspl: 3.84
+2025-05-28 03:14:48,136   INFO  Current Score: 18.616746778901856
+2025-05-28 03:14:48,136   INFO  Best Score: 18.616746778901856
+2025-05-28 03:14:48,440   INFO  Remove Checkpoint at Epoch 6...
+2025-05-28 04:37:31,307   INFO  ***** train [8] epoch *****
+2025-05-28 04:37:31,308   INFO  Loss: 10.54
+Instr_pred: 1.21
+REVERIE: 10.54
+
+2025-05-28 04:37:31,310   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 04:45:08,327   INFO  eval 3524 predictions
+2025-05-28 04:45:08,417   INFO  
+[Eval] val_unseen epoch 8
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 8.66, steps: 11.87, lengths: 23.72, nav_error: 7.84, oracle_error: 3.36
+[Eval] ||| sr: 22.99, oracle_sr: 39.67, spl: 18.18, rgs: 6.44, rgspl: 4.96
+2025-05-28 04:45:08,421   INFO  Current Score: 18.18412533041002
+2025-05-28 04:45:08,421   INFO  Best Score: 18.616746778901856
+2025-05-28 06:03:33,864   INFO  ***** train [9] epoch *****
+2025-05-28 06:03:33,864   INFO  Loss: 9.18
+Instr_pred: 1.14
+REVERIE: 9.18
+
+2025-05-28 06:03:33,866   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 06:10:27,815   INFO  eval 3524 predictions
+2025-05-28 06:10:27,936   INFO  
+[Eval] val_unseen epoch 9
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 8.22, steps: 9.97, lengths: 19.93, nav_error: 8.00, oracle_error: 3.63
+[Eval] ||| sr: 25.79, oracle_sr: 40.55, spl: 20.06, rgs: 9.93, rgspl: 7.86
+2025-05-28 06:10:27,941   INFO  Current Score: 20.060448225232914
+2025-05-28 06:10:27,941   INFO  Best Score: 20.060448225232914
+2025-05-28 06:10:29,423   INFO  Remove Checkpoint at Epoch 7...
+2025-05-28 07:31:05,419   INFO  ***** train [10] epoch *****
+2025-05-28 07:31:05,421   INFO  Loss: 7.67
+Instr_pred: 1.13
+REVERIE: 7.67
+
+2025-05-28 07:31:05,422   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 07:38:40,344   INFO  eval 3524 predictions
+2025-05-28 07:38:40,434   INFO  
+[Eval] val_unseen epoch 10
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 8.23, steps: 10.60, lengths: 21.26, nav_error: 7.13, oracle_error: 3.15
+[Eval] ||| sr: 29.31, oracle_sr: 44.52, spl: 23.02, rgs: 11.55, rgspl: 9.05
+2025-05-28 07:38:40,438   INFO  Current Score: 23.016478334162212
+2025-05-28 07:38:40,438   INFO  Best Score: 23.016478334162212
+2025-05-28 07:38:42,048   INFO  Remove Checkpoint at Epoch 9...
+2025-05-28 08:54:36,093   INFO  ***** train [11] epoch *****
+2025-05-28 08:54:36,094   INFO  Loss: 6.69
+Instr_pred: 1.05
+REVERIE: 6.69
+
+2025-05-28 08:54:36,096   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 09:04:36,450   INFO  eval 3524 predictions
+2025-05-28 09:04:36,542   INFO  
+[Eval] val_unseen epoch 11
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 8.42, steps: 11.45, lengths: 23.08, nav_error: 7.54, oracle_error: 3.13
+[Eval] ||| sr: 25.71, oracle_sr: 45.49, spl: 19.61, rgs: 10.16, rgspl: 7.53
+2025-05-28 09:04:36,546   INFO  Current Score: 19.61216658617954
+2025-05-28 09:04:36,546   INFO  Best Score: 23.016478334162212
+2025-05-28 10:19:34,112   INFO  ***** train [12] epoch *****
+2025-05-28 10:19:34,113   INFO  Loss: 6.00
+Instr_pred: 1.00
+REVERIE: 6.00
+
+2025-05-28 10:19:34,114   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 10:26:25,095   INFO  eval 3524 predictions
+2025-05-28 10:26:25,184   INFO  
+[Eval] val_unseen epoch 12
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 8.25, steps: 11.48, lengths: 22.84, nav_error: 7.06, oracle_error: 2.92
+[Eval] ||| sr: 29.11, oracle_sr: 47.81, spl: 22.39, rgs: 12.17, rgspl: 9.42
+2025-05-28 10:26:25,188   INFO  Current Score: 22.387592429521046
+2025-05-28 10:26:25,188   INFO  Best Score: 23.016478334162212
+2025-05-28 11:38:31,622   INFO  ***** train [13] epoch *****
+2025-05-28 11:38:31,622   INFO  Loss: 5.34
+Instr_pred: 0.94
+REVERIE: 5.34
+
+2025-05-28 11:38:31,624   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 11:45:40,301   INFO  eval 3524 predictions
+2025-05-28 11:45:40,658   INFO  
+[Eval] val_unseen epoch 13
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.21, steps: 8.84, lengths: 17.67, nav_error: 7.12, oracle_error: 3.39
+[Eval] ||| sr: 27.01, oracle_sr: 38.11, spl: 23.00, rgs: 12.91, rgspl: 10.95
+2025-05-28 11:45:40,661   INFO  Current Score: 23.0048931207668
+2025-05-28 11:45:40,661   INFO  Best Score: 23.016478334162212
+2025-05-28 12:58:32,744   INFO  ***** train [14] epoch *****
+2025-05-28 12:58:32,744   INFO  Loss: 4.75
+Instr_pred: 0.87
+REVERIE: 4.75
+
+2025-05-28 12:58:32,746   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 13:05:24,222   INFO  eval 3524 predictions
+2025-05-28 13:05:24,309   INFO  
+[Eval] val_unseen epoch 14
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.64, steps: 9.94, lengths: 19.92, nav_error: 7.17, oracle_error: 3.23
+[Eval] ||| sr: 28.75, oracle_sr: 44.64, spl: 23.14, rgs: 14.05, rgspl: 11.02
+2025-05-28 13:05:24,312   INFO  Current Score: 23.135579077007975
+2025-05-28 13:05:24,312   INFO  Best Score: 23.135579077007975
+2025-05-28 13:05:24,516   INFO  Remove Checkpoint at Epoch 10...
+2025-05-28 14:18:28,200   INFO  ***** train [15] epoch *****
+2025-05-28 14:18:28,202   INFO  Loss: 4.52
+Instr_pred: 0.80
+REVERIE: 4.52
+
+2025-05-28 14:18:28,204   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 14:25:00,468   INFO  eval 3524 predictions
+2025-05-28 14:25:00,557   INFO  
+[Eval] val_unseen epoch 15
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.67, steps: 9.84, lengths: 19.74, nav_error: 7.23, oracle_error: 3.41
+[Eval] ||| sr: 25.96, oracle_sr: 39.36, spl: 20.99, rgs: 12.26, rgspl: 9.76
+2025-05-28 14:25:00,561   INFO  Current Score: 20.990374666241486
+2025-05-28 14:25:00,561   INFO  Best Score: 23.135579077007975
+2025-05-28 15:38:21,664   INFO  ***** train [16] epoch *****
+2025-05-28 15:38:21,664   INFO  Loss: 4.11
+Instr_pred: 0.77
+REVERIE: 4.11
+
+2025-05-28 15:38:21,666   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 15:45:00,541   INFO  eval 3524 predictions
+2025-05-28 15:45:00,633   INFO  
+[Eval] val_unseen epoch 16
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.93, steps: 11.14, lengths: 22.26, nav_error: 7.05, oracle_error: 3.22
+[Eval] ||| sr: 28.06, oracle_sr: 41.91, spl: 22.26, rgs: 13.20, rgspl: 10.07
+2025-05-28 15:45:00,636   INFO  Current Score: 22.260025978039483
+2025-05-28 15:45:00,637   INFO  Best Score: 23.135579077007975
+2025-05-28 16:55:53,559   INFO  ***** train [17] epoch *****
+2025-05-28 16:55:53,560   INFO  Loss: 3.74
+Instr_pred: 0.70
+REVERIE: 3.74
+
+2025-05-28 16:55:53,561   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 17:02:49,613   INFO  eval 3524 predictions
+2025-05-28 17:02:49,710   INFO  
+[Eval] val_unseen epoch 17
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.59, steps: 9.69, lengths: 19.39, nav_error: 6.93, oracle_error: 3.32
+[Eval] ||| sr: 30.31, oracle_sr: 42.05, spl: 24.29, rgs: 13.82, rgspl: 11.02
+2025-05-28 17:02:49,714   INFO  Current Score: 24.28926033958257
+2025-05-28 17:02:49,714   INFO  Best Score: 24.28926033958257
+2025-05-28 17:02:49,940   INFO  Remove Checkpoint at Epoch 14...
+2025-05-28 18:14:53,180   INFO  ***** train [18] epoch *****
+2025-05-28 18:14:53,180   INFO  Loss: 3.85
+Instr_pred: 0.66
+REVERIE: 3.85
+
+2025-05-28 18:14:53,182   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 18:20:43,169   INFO  eval 3524 predictions
+2025-05-28 18:20:43,251   INFO  
+[Eval] val_unseen epoch 18
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 6.79, steps: 7.77, lengths: 15.56, nav_error: 7.12, oracle_error: 3.62
+[Eval] ||| sr: 27.47, oracle_sr: 36.52, spl: 23.51, rgs: 13.51, rgspl: 11.34
+2025-05-28 18:20:43,255   INFO  Current Score: 23.513589890235913
+2025-05-28 18:20:43,255   INFO  Best Score: 24.28926033958257
+2025-05-28 19:28:46,208   INFO  ***** train [19] epoch *****
+2025-05-28 19:28:46,208   INFO  Loss: 3.42
+Instr_pred: 0.61
+REVERIE: 3.42
+
+2025-05-28 19:28:46,210   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 19:35:13,381   INFO  eval 3524 predictions
+2025-05-28 19:35:13,468   INFO  
+[Eval] val_unseen epoch 19
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.58, steps: 9.50, lengths: 19.00, nav_error: 7.15, oracle_error: 3.33
+[Eval] ||| sr: 28.66, oracle_sr: 39.61, spl: 23.24, rgs: 14.10, rgspl: 11.12
+2025-05-28 19:35:13,472   INFO  Current Score: 23.235692481937196
+2025-05-28 19:35:13,472   INFO  Best Score: 24.28926033958257
+2025-05-28 20:43:03,177   INFO  ***** train [20] epoch *****
+2025-05-28 20:43:03,177   INFO  Loss: 3.16
+Instr_pred: 0.57
+REVERIE: 3.16
+
+2025-05-28 20:43:03,179   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 20:49:25,529   INFO  eval 3524 predictions
+2025-05-28 20:49:25,616   INFO  
+[Eval] val_unseen epoch 20
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.63, steps: 9.53, lengths: 18.95, nav_error: 7.00, oracle_error: 3.27
+[Eval] ||| sr: 28.43, oracle_sr: 40.41, spl: 23.43, rgs: 13.54, rgspl: 10.82
+2025-05-28 20:49:25,619   INFO  Current Score: 23.42973610326411
+2025-05-28 20:49:25,620   INFO  Best Score: 24.28926033958257
+2025-05-28 21:55:55,512   INFO  ***** train [21] epoch *****
+2025-05-28 21:55:55,512   INFO  Loss: 2.92
+Instr_pred: 0.55
+REVERIE: 2.92
+
+2025-05-28 21:55:55,514   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 22:02:19,523   INFO  eval 3524 predictions
+2025-05-28 22:02:19,606   INFO  
+[Eval] val_unseen epoch 21
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.69, steps: 9.65, lengths: 19.75, nav_error: 6.89, oracle_error: 3.34
+[Eval] ||| sr: 28.55, oracle_sr: 41.12, spl: 22.55, rgs: 15.55, rgspl: 11.92
+2025-05-28 22:02:19,609   INFO  Current Score: 22.54727471354827
+2025-05-28 22:02:19,609   INFO  Best Score: 24.28926033958257
+2025-05-28 23:08:56,964   INFO  ***** train [22] epoch *****
+2025-05-28 23:08:56,964   INFO  Loss: 2.81
+Instr_pred: 0.50
+REVERIE: 2.81
+
+2025-05-28 23:08:56,966   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-28 23:15:29,636   INFO  eval 3524 predictions
+2025-05-28 23:15:29,719   INFO  
+[Eval] val_unseen epoch 22
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.78, steps: 9.52, lengths: 19.23, nav_error: 7.19, oracle_error: 3.25
+[Eval] ||| sr: 30.02, oracle_sr: 42.91, spl: 23.48, rgs: 15.15, rgspl: 11.80
+2025-05-28 23:15:29,722   INFO  Current Score: 23.47788398034858
+2025-05-28 23:15:29,723   INFO  Best Score: 24.28926033958257
+2025-05-29 00:23:13,862   INFO  ***** train [23] epoch *****
+2025-05-29 00:23:13,862   INFO  Loss: 2.89
+Instr_pred: 0.47
+REVERIE: 2.89
+
+2025-05-29 00:23:13,864   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-29 00:29:43,718   INFO  eval 3524 predictions
+2025-05-29 00:29:43,802   INFO  
+[Eval] val_unseen epoch 23
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.85, steps: 9.83, lengths: 19.94, nav_error: 6.70, oracle_error: 3.12
+[Eval] ||| sr: 30.59, oracle_sr: 44.47, spl: 24.54, rgs: 15.27, rgspl: 11.83
+2025-05-29 00:29:43,806   INFO  Current Score: 24.542134448373325
+2025-05-29 00:29:43,806   INFO  Best Score: 24.542134448373325
+2025-05-29 00:29:44,644   INFO  Remove Checkpoint at Epoch 17...
+2025-05-29 01:39:21,466   INFO  ***** train [24] epoch *****
+2025-05-29 01:39:21,466   INFO  Loss: 2.67
+Instr_pred: 0.45
+REVERIE: 2.67
+
+2025-05-29 01:39:21,467   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-29 01:46:12,771   INFO  eval 3524 predictions
+2025-05-29 01:46:12,859   INFO  
+[Eval] val_unseen epoch 24
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.76, steps: 9.88, lengths: 19.71, nav_error: 6.86, oracle_error: 3.19
+[Eval] ||| sr: 32.01, oracle_sr: 44.67, spl: 26.18, rgs: 15.95, rgspl: 12.86
+2025-05-29 01:46:12,862   INFO  Current Score: 26.17736153701735
+2025-05-29 01:46:12,862   INFO  Best Score: 26.17736153701735
+2025-05-29 01:46:14,863   INFO  Remove Checkpoint at Epoch 23...
+2025-05-29 02:53:49,824   INFO  ***** train [25] epoch *****
+2025-05-29 02:53:49,824   INFO  Loss: 2.55
+Instr_pred: 0.41
+REVERIE: 2.55
+
+2025-05-29 02:53:49,826   INFO  ***** validate val_unseen split on REVERIE task *****
+2025-05-29 02:59:54,647   INFO  eval 3524 predictions
+2025-05-29 02:59:54,730   INFO  
+[Eval] val_unseen epoch 25
+
+ [Eval] dataset=[REVERIE] 
+, action_steps: 7.19, steps: 9.26, lengths: 18.53, nav_error: 6.96, oracle_error: 3.36
+[Eval] ||| sr: 29.34, oracle_sr: 39.27, spl: 24.35, rgs: 14.81, rgspl: 12.11
+2025-05-29 02:59:54,733   INFO  Current Score: 24.35061207437858
+2025-05-29 02:59:54,733   INFO  Best Score: 26.17736153701735

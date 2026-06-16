@@ -1,0 +1,446 @@
+2025-05-25 14:28:23,995   INFO  Training in distributed mode : total_batch_size: 4
+2025-05-25 14:28:23,995   INFO  **************************** Train ****************************
+2025-05-25 15:58:30,839   INFO  ***** train [0] epoch *****
+2025-05-25 15:58:30,839   INFO  Loss: 25.21
+Instr_pred: 2.02
+SOON: 25.21
+
+2025-05-25 15:58:30,841   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-25 16:07:33,919   INFO  eval 3392 predictions
+2025-05-25 16:07:33,996   INFO
+[Eval] val_unseen epoch 0
+
+ [Eval] dataset=[SOON]
+, action_steps: 10.80, steps: 15.42, lengths: 31.74, nav_error: 14.44, oracle_error: 9.64
+[Eval] ||| sr: 6.60, oracle_sr: 12.44, spl: 4.37, det_sr: 0.06, det_spl: 0.03
+2025-05-25 16:07:34,000   INFO  Current Score: 4.372416656949197
+2025-05-25 16:07:34,001   INFO  Best Score: 4.372416656949197
+2025-05-25 17:39:38,311   INFO  ***** train [1] epoch *****
+2025-05-25 17:39:38,311   INFO  Loss: 21.33
+Instr_pred: 1.42
+SOON: 21.33
+
+2025-05-25 17:39:38,313   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-25 17:48:19,976   INFO  eval 3392 predictions
+2025-05-25 17:48:20,048   INFO
+[Eval] val_unseen epoch 1
+
+ [Eval] dataset=[SOON]
+, action_steps: 10.43, steps: 12.36, lengths: 22.37, nav_error: 12.49, oracle_error: 7.77
+[Eval] ||| sr: 7.72, oracle_sr: 17.42, spl: 6.60, det_sr: 0.06, det_spl: 0.06
+2025-05-25 17:48:20,052   INFO  Current Score: 6.598326237679444
+2025-05-25 17:48:20,052   INFO  Best Score: 6.598326237679444
+2025-05-25 17:48:21,921   INFO  Remove Checkpoint at Epoch 0...
+2025-05-25 19:20:24,551   INFO  ***** train [2] epoch *****
+2025-05-25 19:20:24,551   INFO  Loss: 19.54
+Instr_pred: 1.11
+SOON: 19.54
+
+2025-05-25 19:20:24,553   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-25 19:30:10,912   INFO  eval 3392 predictions
+2025-05-25 19:30:10,996   INFO
+[Eval] val_unseen epoch 2
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.23, steps: 13.89, lengths: 24.91, nav_error: 13.31, oracle_error: 6.96
+[Eval] ||| sr: 11.88, oracle_sr: 24.59, spl: 9.99, det_sr: 0.56, det_spl: 0.44
+2025-05-25 19:30:11,000   INFO  Current Score: 9.990319576788808
+2025-05-25 19:30:11,000   INFO  Best Score: 9.990319576788808
+2025-05-25 19:30:12,911   INFO  Remove Checkpoint at Epoch 1...
+2025-05-25 21:02:27,816   INFO  ***** train [3] epoch *****
+2025-05-25 21:02:27,816   INFO  Loss: 18.43
+Instr_pred: 0.90
+SOON: 18.43
+
+2025-05-25 21:02:27,818   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-25 21:11:53,432   INFO  eval 3392 predictions
+2025-05-25 21:11:53,513   INFO
+[Eval] val_unseen epoch 3
+
+ [Eval] dataset=[SOON]
+, action_steps: 11.66, steps: 12.82, lengths: 23.10, nav_error: 13.44, oracle_error: 7.11
+[Eval] ||| sr: 10.29, oracle_sr: 24.00, spl: 8.92, det_sr: 0.47, det_spl: 0.42
+2025-05-25 21:11:53,517   INFO  Current Score: 8.922176770371632
+2025-05-25 21:11:53,517   INFO  Best Score: 9.990319576788808
+2025-05-25 22:44:05,096   INFO  ***** train [4] epoch *****
+2025-05-25 22:44:05,096   INFO  Loss: 17.83
+Instr_pred: 0.68
+SOON: 17.83
+
+2025-05-25 22:44:05,098   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-25 22:52:58,430   INFO  eval 3392 predictions
+2025-05-25 22:52:58,510   INFO
+[Eval] val_unseen epoch 4
+
+ [Eval] dataset=[SOON]
+, action_steps: 11.11, steps: 12.41, lengths: 22.36, nav_error: 12.90, oracle_error: 7.33
+[Eval] ||| sr: 11.08, oracle_sr: 24.56, spl: 9.64, det_sr: 0.50, det_spl: 0.44
+2025-05-25 22:52:58,513   INFO  Current Score: 9.638806748100992
+2025-05-25 22:52:58,514   INFO  Best Score: 9.990319576788808
+2025-05-26 00:25:02,395   INFO  ***** train [5] epoch *****
+2025-05-26 00:25:02,395   INFO  Loss: 16.96
+Instr_pred: 0.51
+SOON: 16.96
+
+2025-05-26 00:25:02,397   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 00:35:12,061   INFO  eval 3392 predictions
+2025-05-26 00:35:12,146   INFO
+[Eval] val_unseen epoch 5
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.61, steps: 17.23, lengths: 30.82, nav_error: 12.27, oracle_error: 6.65
+[Eval] ||| sr: 12.82, oracle_sr: 29.19, spl: 10.23, det_sr: 0.68, det_spl: 0.45
+2025-05-26 00:35:12,150   INFO  Current Score: 10.228962819340099
+2025-05-26 00:35:12,150   INFO  Best Score: 10.228962819340099
+2025-05-26 00:35:14,114   INFO  Remove Checkpoint at Epoch 2...
+2025-05-26 02:06:33,788   INFO  ***** train [6] epoch *****
+2025-05-26 02:06:33,789   INFO  Loss: 15.55
+Instr_pred: 0.40
+SOON: 15.55
+
+2025-05-26 02:06:33,790   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 02:15:53,132   INFO  eval 3392 predictions
+2025-05-26 02:15:53,217   INFO
+[Eval] val_unseen epoch 6
+
+ [Eval] dataset=[SOON]
+, action_steps: 11.35, steps: 13.39, lengths: 25.12, nav_error: 11.59, oracle_error: 6.60
+[Eval] ||| sr: 16.13, oracle_sr: 32.37, spl: 13.38, det_sr: 0.85, det_spl: 0.73
+2025-05-26 02:15:53,221   INFO  Current Score: 13.377546438023433
+2025-05-26 02:15:53,222   INFO  Best Score: 13.377546438023433
+2025-05-26 02:15:55,140   INFO  Remove Checkpoint at Epoch 5...
+2025-05-26 03:46:38,510   INFO  ***** train [7] epoch *****
+2025-05-26 03:46:38,510   INFO  Loss: 14.11
+Instr_pred: 0.28
+SOON: 14.11
+
+2025-05-26 03:46:38,512   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 03:56:59,924   INFO  eval 3392 predictions
+2025-05-26 03:57:00,017   INFO
+[Eval] val_unseen epoch 7
+
+ [Eval] dataset=[SOON]
+, action_steps: 13.08, steps: 16.79, lengths: 32.16, nav_error: 10.05, oracle_error: 5.45
+[Eval] ||| sr: 20.11, oracle_sr: 39.62, spl: 15.54, det_sr: 1.18, det_spl: 0.89
+2025-05-26 03:57:00,022   INFO  Current Score: 15.535924156775897
+2025-05-26 03:57:00,023   INFO  Best Score: 15.535924156775897
+2025-05-26 03:57:01,951   INFO  Remove Checkpoint at Epoch 6...
+2025-05-26 05:26:48,145   INFO  ***** train [8] epoch *****
+2025-05-26 05:26:48,146   INFO  Loss: 12.24
+Instr_pred: 0.26
+SOON: 12.24
+
+2025-05-26 05:26:48,147   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 05:36:57,099   INFO  eval 3392 predictions
+2025-05-26 05:36:57,199   INFO
+[Eval] val_unseen epoch 8
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.74, steps: 17.01, lengths: 32.57, nav_error: 10.07, oracle_error: 5.68
+[Eval] ||| sr: 21.64, oracle_sr: 39.42, spl: 17.59, det_sr: 1.21, det_spl: 0.98
+2025-05-26 05:36:57,204   INFO  Current Score: 17.594777364828538
+2025-05-26 05:36:57,204   INFO  Best Score: 17.594777364828538
+2025-05-26 05:36:59,160   INFO  Remove Checkpoint at Epoch 7...
+2025-05-26 07:06:44,477   INFO  ***** train [9] epoch *****
+2025-05-26 07:06:44,478   INFO  Loss: 11.18
+Instr_pred: 0.21
+SOON: 11.18
+
+2025-05-26 07:06:44,479   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 07:16:25,585   INFO  eval 3392 predictions
+2025-05-26 07:16:25,685   INFO
+[Eval] val_unseen epoch 9
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.09, steps: 15.03, lengths: 29.13, nav_error: 9.61, oracle_error: 5.62
+[Eval] ||| sr: 25.18, oracle_sr: 40.36, spl: 19.99, det_sr: 0.97, det_spl: 0.80
+2025-05-26 07:16:25,689   INFO  Current Score: 19.986077760751247
+2025-05-26 07:16:25,689   INFO  Best Score: 19.986077760751247
+2025-05-26 07:16:27,669   INFO  Remove Checkpoint at Epoch 8...
+2025-05-26 08:45:45,214   INFO  ***** train [10] epoch *****
+2025-05-26 08:45:45,214   INFO  Loss: 9.48
+Instr_pred: 0.16
+SOON: 9.48
+
+2025-05-26 08:45:45,216   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 08:55:50,962   INFO  eval 3392 predictions
+2025-05-26 08:55:51,065   INFO
+[Eval] val_unseen epoch 10
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.77, steps: 15.49, lengths: 29.81, nav_error: 9.33, oracle_error: 5.13
+[Eval] ||| sr: 27.68, oracle_sr: 45.08, spl: 21.59, det_sr: 1.95, det_spl: 1.61
+2025-05-26 08:55:51,069   INFO  Current Score: 21.58643426452457
+2025-05-26 08:55:51,069   INFO  Best Score: 21.58643426452457
+2025-05-26 08:55:53,005   INFO  Remove Checkpoint at Epoch 9...2025-05-26 10:25:22,857   INFO  ***** train [11] epoch *****
+2025-05-26 10:25:22,857   INFO  Loss: 8.69
+Instr_pred: 0.14
+SOON: 8.69
+
+2025-05-26 10:25:22,859   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 10:35:05,610   INFO  eval 3392 predictions
+2025-05-26 10:35:05,714   INFO
+[Eval] val_unseen epoch 11
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.13, steps: 15.62, lengths: 30.24, nav_error: 9.18, oracle_error: 5.24
+[Eval] ||| sr: 26.53, oracle_sr: 44.72, spl: 19.91, det_sr: 1.33, det_spl: 1.02
+2025-05-26 10:35:05,718   INFO  Current Score: 19.912480450741924
+2025-05-26 10:35:05,718   INFO  Best Score: 21.58643426452457
+2025-05-26 12:03:37,135   INFO  ***** train [12] epoch *****
+2025-05-26 12:03:37,135   INFO  Loss: 7.95
+Instr_pred: 0.13
+SOON: 7.95
+
+2025-05-26 12:03:37,137   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 12:13:15,501   INFO  eval 3392 predictions
+2025-05-26 12:13:15,606   INFO
+[Eval] val_unseen epoch 12
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.27, steps: 15.24, lengths: 29.61, nav_error: 9.00, oracle_error: 5.10
+[Eval] ||| sr: 29.95, oracle_sr: 44.25, spl: 23.04, det_sr: 2.12, det_spl: 1.75
+2025-05-26 12:13:15,610   INFO  Current Score: 23.040686671861373
+2025-05-26 12:13:15,610   INFO  Best Score: 23.040686671861373
+2025-05-26 12:13:17,577   INFO  Remove Checkpoint at Epoch 10...
+2025-05-26 13:41:21,053   INFO  ***** train [13] epoch *****
+2025-05-26 13:41:21,053   INFO  Loss: 7.07
+Instr_pred: 0.12
+SOON: 7.07
+
+2025-05-26 13:41:21,055   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 13:50:48,651   INFO  eval 3392 predictions
+2025-05-26 13:50:48,754   INFO
+[Eval] val_unseen epoch 13
+
+ [Eval] dataset=[SOON]
+, action_steps: 11.98, steps: 14.52, lengths: 28.41, nav_error: 8.85, oracle_error: 5.23
+[Eval] ||| sr: 27.92, oracle_sr: 40.89, spl: 21.34, det_sr: 1.98, det_spl: 1.49
+2025-05-26 13:50:48,758   INFO  Current Score: 21.344271215297542
+2025-05-26 13:50:48,758   INFO  Best Score: 23.040686671861373
+2025-05-26 15:18:55,024   INFO  ***** train [14] epoch *****
+2025-05-26 15:18:55,024   INFO  Loss: 6.31
+Instr_pred: 0.11
+SOON: 6.31
+
+2025-05-26 15:18:55,026   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 15:28:28,345   INFO  eval 3392 predictions
+2025-05-26 15:28:28,449   INFO
+[Eval] val_unseen epoch 14
+
+ [Eval] dataset=[SOON]
+, action_steps: 11.98, steps: 14.91, lengths: 29.04, nav_error: 9.04, oracle_error: 5.34
+[Eval] ||| sr: 26.62, oracle_sr: 41.13, spl: 20.61, det_sr: 1.83, det_spl: 1.38
+2025-05-26 15:28:28,453   INFO  Current Score: 20.61085390988353
+2025-05-26 15:28:28,454   INFO  Best Score: 23.040686671861373
+2025-05-26 16:55:48,730   INFO  ***** train [15] epoch *****
+2025-05-26 16:55:48,730   INFO  Loss: 5.72
+Instr_pred: 0.10
+SOON: 5.72
+
+2025-05-26 16:55:48,732   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 17:05:41,530   INFO  eval 3392 predictions
+2025-05-26 17:05:41,626   INFO
+[Eval] val_unseen epoch 15
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.30, steps: 15.89, lengths: 31.07, nav_error: 8.74, oracle_error: 5.02
+[Eval] ||| sr: 29.30, oracle_sr: 44.99, spl: 22.43, det_sr: 2.21, det_spl: 1.80
+2025-05-26 17:05:41,630   INFO  Current Score: 22.42933296671477
+2025-05-26 17:05:41,630   INFO  Best Score: 23.040686671861373
+2025-05-26 18:32:48,604   INFO  ***** train [16] epoch *****
+2025-05-26 18:32:48,604   INFO  Loss: 5.20
+Instr_pred: 0.09
+SOON: 5.20
+
+2025-05-26 18:32:48,606   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 18:42:43,026   INFO  eval 3392 predictions
+2025-05-26 18:42:43,133   INFO
+[Eval] val_unseen epoch 16
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.49, steps: 16.71, lengths: 32.69, nav_error: 8.60, oracle_error: 4.98
+[Eval] ||| sr: 30.45, oracle_sr: 44.99, spl: 22.31, det_sr: 2.12, det_spl: 1.58
+2025-05-26 18:42:43,137   INFO  Current Score: 22.312630283541118
+2025-05-26 18:42:43,137   INFO  Best Score: 23.040686671861373
+2025-05-26 20:09:24,636   INFO  ***** train [17] epoch *****
+2025-05-26 20:09:24,637   INFO  Loss: 4.87
+Instr_pred: 0.09
+SOON: 4.87
+
+2025-05-26 20:09:24,638   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 20:18:49,291   INFO  eval 3392 predictions
+2025-05-26 20:18:49,401   INFO
+[Eval] val_unseen epoch 17
+
+ [Eval] dataset=[SOON]
+, action_steps: 11.83, steps: 14.59, lengths: 28.55, nav_error: 8.62, oracle_error: 5.08
+[Eval] ||| sr: 30.34, oracle_sr: 43.60, spl: 23.70, det_sr: 1.68, det_spl: 1.36
+2025-05-26 20:18:49,405   INFO  Current Score: 23.701528325071315
+2025-05-26 20:18:49,405   INFO  Best Score: 23.701528325071315
+2025-05-26 20:18:51,366   INFO  Remove Checkpoint at Epoch 12...
+2025-05-26 21:46:04,577   INFO  ***** train [18] epoch *****
+2025-05-26 21:46:04,577   INFO  Loss: 4.52
+Instr_pred: 0.08
+SOON: 4.52
+
+2025-05-26 21:46:04,579   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 21:55:38,889   INFO  eval 3392 predictions
+2025-05-26 21:55:38,999   INFO
+[Eval] val_unseen epoch 18
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.15, steps: 15.47, lengths: 29.91, nav_error: 8.84, oracle_error: 5.13
+[Eval] ||| sr: 29.86, oracle_sr: 43.57, spl: 22.44, det_sr: 1.65, det_spl: 1.37
+2025-05-26 21:55:39,003   INFO  Current Score: 22.44156268269894
+2025-05-26 21:55:39,003   INFO  Best Score: 23.701528325071315
+2025-05-26 23:22:22,846   INFO  ***** train [19] epoch *****
+2025-05-26 23:22:22,846   INFO  Loss: 4.32
+Instr_pred: 0.08
+SOON: 4.32
+
+2025-05-26 23:22:22,848   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-26 23:31:41,649   INFO  eval 3392 predictions
+2025-05-26 23:31:41,751   INFO
+[Eval] val_unseen epoch 19
+
+ [Eval] dataset=[SOON]
+, action_steps: 11.82, steps: 14.97, lengths: 28.90, nav_error: 9.16, oracle_error: 5.53
+[Eval] ||| sr: 26.56, oracle_sr: 38.80, spl: 20.46, det_sr: 1.95, det_spl: 1.63
+2025-05-26 23:31:41,755   INFO  Current Score: 20.46370216193863
+2025-05-26 23:31:41,755   INFO  Best Score: 23.701528325071315
+2025-05-27 00:58:07,117   INFO  ***** train [20] epoch *****
+2025-05-27 00:58:07,117   INFO  Loss: 4.07
+Instr_pred: 0.08
+SOON: 4.07
+
+2025-05-27 00:58:07,119   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 01:07:54,892   INFO  eval 3392 predictions
+2025-05-27 01:07:54,986   INFO
+[Eval] val_unseen epoch 20
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.46, steps: 16.21, lengths: 31.20, nav_error: 9.14, oracle_error: 5.08
+[Eval] ||| sr: 27.54, oracle_sr: 44.55, spl: 20.31, det_sr: 1.36, det_spl: 1.10
+2025-05-27 01:07:54,990   INFO  Current Score: 20.31332652933161
+2025-05-27 01:07:54,990   INFO  Best Score: 23.701528325071315
+2025-05-27 02:33:44,487   INFO  ***** train [21] epoch *****
+2025-05-27 02:33:44,488   INFO  Loss: 3.58
+Instr_pred: 0.07
+SOON: 3.58
+
+2025-05-27 02:33:44,489   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 02:43:17,092   INFO  eval 3392 predictions
+2025-05-27 02:43:17,184   INFO
+[Eval] val_unseen epoch 21
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.03, steps: 15.67, lengths: 30.91, nav_error: 8.72, oracle_error: 5.09
+[Eval] ||| sr: 29.92, oracle_sr: 44.66, spl: 22.48, det_sr: 1.65, det_spl: 1.39
+2025-05-27 02:43:17,188   INFO  Current Score: 22.479016317392244
+2025-05-27 02:43:17,188   INFO  Best Score: 23.701528325071315
+2025-05-27 04:09:05,167   INFO  ***** train [22] epoch *****
+2025-05-27 04:09:05,168   INFO  Loss: 3.47
+Instr_pred: 0.07
+SOON: 3.47
+
+2025-05-27 04:09:05,169   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 04:18:43,256   INFO  eval 3392 predictions
+2025-05-27 04:18:43,345   INFO
+[Eval] val_unseen epoch 22
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.24, steps: 15.27, lengths: 29.89, nav_error: 9.09, oracle_error: 5.06
+[Eval] ||| sr: 27.00, oracle_sr: 43.48, spl: 19.99, det_sr: 1.53, det_spl: 1.13
+2025-05-27 04:18:43,349   INFO  Current Score: 19.990750691980875
+2025-05-27 04:18:43,349   INFO  Best Score: 23.701528325071315
+2025-05-27 05:44:00,629   INFO  ***** train [23] epoch *****
+2025-05-27 05:44:00,629   INFO  Loss: 3.43
+Instr_pred: 0.07
+SOON: 3.43
+
+2025-05-27 05:44:00,630   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 05:53:29,853   INFO  eval 3392 predictions
+2025-05-27 05:53:29,943   INFO
+[Eval] val_unseen epoch 23
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.04, steps: 15.75, lengths: 30.99, nav_error: 9.04, oracle_error: 5.35
+[Eval] ||| sr: 27.83, oracle_sr: 41.77, spl: 20.49, det_sr: 2.21, det_spl: 1.70
+2025-05-27 05:53:29,946   INFO  Current Score: 20.492059042926726
+2025-05-27 05:53:29,947   INFO  Best Score: 23.701528325071315
+2025-05-27 07:18:49,910   INFO  ***** train [24] epoch *****
+2025-05-27 07:18:49,910   INFO  Loss: 3.01
+Instr_pred: 0.07
+SOON: 3.01
+
+2025-05-27 07:18:49,911   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 07:28:31,071   INFO  eval 3392 predictions
+2025-05-27 07:28:31,165   INFO
+[Eval] val_unseen epoch 24
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.36, steps: 15.68, lengths: 30.86, nav_error: 8.95, oracle_error: 5.06
+[Eval] ||| sr: 29.30, oracle_sr: 45.19, spl: 21.39, det_sr: 1.65, det_spl: 1.27
+2025-05-27 07:28:31,169   INFO  Current Score: 21.386233320513814
+2025-05-27 07:28:31,169   INFO  Best Score: 23.701528325071315
+2025-05-27 08:53:55,973   INFO  ***** train [25] epoch *****
+2025-05-27 08:53:55,974   INFO  Loss: 3.06
+Instr_pred: 0.06
+SOON: 3.06
+
+2025-05-27 08:53:55,975   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 09:03:31,300   INFO  eval 3392 predictions
+2025-05-27 09:03:31,387   INFO
+[Eval] val_unseen epoch 25
+
+ [Eval] dataset=[SOON]
+, action_steps: 12.10, steps: 15.59, lengths: 30.88, nav_error: 9.01, oracle_error: 5.26
+[Eval] ||| sr: 26.36, oracle_sr: 42.60, spl: 19.35, det_sr: 1.65, det_spl: 1.32
+2025-05-27 09:03:31,391   INFO  Current Score: 19.34518893708769
+2025-05-27 09:03:31,391   INFO  Best Score: 23.701528325071315
+2025-05-27 10:28:32,701   INFO  ***** train [26] epoch *****
+2025-05-27 10:28:32,701   INFO  Loss: 2.84
+Instr_pred: 0.06
+SOON: 2.84
+
+2025-05-27 10:28:32,703   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 10:37:46,477   INFO  eval 3392 predictions
+2025-05-27 10:37:46,563   INFO
+[Eval] val_unseen epoch 26
+
+ [Eval] dataset=[SOON]
+, action_steps: 11.71, steps: 14.69, lengths: 28.71, nav_error: 9.23, oracle_error: 5.57
+[Eval] ||| sr: 26.50, oracle_sr: 40.36, spl: 20.17, det_sr: 2.00, det_spl: 1.56
+2025-05-27 10:37:46,566   INFO  Current Score: 20.16563965450436
+2025-05-27 10:37:46,566   INFO  Best Score: 23.701528325071315
+2025-05-27 12:03:01,865   INFO  ***** train [27] epoch *****
+2025-05-27 12:03:01,865   INFO  Loss: 2.75
+Instr_pred: 0.06
+SOON: 2.75
+
+2025-05-27 12:03:01,866   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 12:12:42,461   INFO  eval 3392 predictions
+2025-05-27 12:12:42,549   INFO
+[Eval] val_unseen epoch 27
+
+ [Eval] dataset=[SOON]
+, action_steps: 11.90, steps: 15.17, lengths: 30.18, nav_error: 9.12, oracle_error: 5.26
+[Eval] ||| sr: 28.66, oracle_sr: 43.57, spl: 21.99, det_sr: 1.50, det_spl: 1.20
+2025-05-27 12:12:42,552   INFO  Current Score: 21.994982411326518
+2025-05-27 12:12:42,552   INFO  Best Score: 23.701528325071315
+2025-05-27 13:37:58,490   INFO  ***** train [28] epoch *****
+2025-05-27 13:37:58,490   INFO  Loss: 2.46
+Instr_pred: 0.06
+SOON: 2.46
+
+2025-05-27 13:37:58,492   INFO  ***** validate val_unseen split on SOON task *****
+2025-05-27 13:47:08,625   INFO  eval 3392 predictions
+2025-05-27 13:47:08,711   INFO
+[Eval] val_unseen epoch 28
+
+ [Eval] dataset=[SOON]
+, action_steps: 11.52, steps: 14.52, lengths: 28.90, nav_error: 8.98, oracle_error: 5.53
+[Eval] ||| sr: 27.77, oracle_sr: 40.15, spl: 20.52, det_sr: 2.00, det_spl: 1.58
+2025-05-27 13:47:08,714   INFO  Current Score: 20.522421059261216
+2025-05-27 13:47:08,714   INFO  Best Score: 23.701528325071315
