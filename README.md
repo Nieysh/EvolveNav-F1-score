@@ -34,7 +34,6 @@
 </div>
 
 
-![motivation](files/overview.png)
 
 ## :new: Updates
 - [06/2025] [Arxiv paper](https://arxiv.org/abs/2506.01551) released.
